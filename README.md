@@ -1,8 +1,12 @@
 # dot-cheat-sheet
 Cheat Sheet about Data Science/Data Engineer stuff with MacOS(zsh), Linux(bash), and a little bit Windows(ps)
 
-## Windows
-### neovim
+## Windows (Powershell)
+### (Must have) Git
+```
+winget install -e --id Git.Git
+```
+### NeoVim
 ```
 winget install Neovim.Neovim
 ```
@@ -24,9 +28,15 @@ function n {
 }
 ```
 save and restart terminal (or powershell)
+### (Optional but Recommend) NVChad
+You need to install NeoVim first
+```
+git clone https://github.com/NvChad/NvChad $HOME\AppData\Local\nvim --depth 1 && nvim
+```
 
-## Linux
-### First step
+---
+## Linux (Bash or Zsh)
+### (Must do!) First step
 ```
 sudo apt update && sudo apt upgrade -y
 ```
@@ -44,3 +54,6 @@ sudo apt install ubuntu-drivers-common
 sudo ubuntu-drivers autoinstall
 nvidia-smi
 ```
+
+---
+## MacOS (Zsh)
