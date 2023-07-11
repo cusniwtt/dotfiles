@@ -8,5 +8,5 @@ sudo apt update
 ```
 
 ```
-sudo apt install neofetch
+sudo apt install neofetch -y
 ```
