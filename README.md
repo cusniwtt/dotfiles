@@ -4,7 +4,7 @@ Cheat Sheet about Data Science/Data Engineer stuff with MacOS(zsh), Linux(bash),
 ## Linux
 First step
 ```
-sudo apt update && sudo apt upgrade
+sudo apt update && sudo apt upgrade -y
 ```
 Install Neofetch
 ```
