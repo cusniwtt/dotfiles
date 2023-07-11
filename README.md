@@ -29,7 +29,7 @@ function n {
 ```
 save and restart terminal (or powershell)
 ### (Optional but Recommend) NVChad
-You need to install NeoVim first
+You need to install NeoVim first [for additional](https://nvchad.com/docs/quickstart/install)
 ```powershell
 git clone https://github.com/NvChad/NvChad $HOME\AppData\Local\nvim --depth 1
 nvim
@@ -63,7 +63,7 @@ sudo apt-get update
 sudo apt-get install neovim -y
 ```
 ### (Optional but Recommend) NVChad
-You need to install NeoVim first
+You need to install NeoVim first [for additional](https://nvchad.com/docs/quickstart/install)
 ```bash
 git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && nvim
 ```
@@ -80,7 +80,7 @@ Dont forget to inspect installation process. It need to do after install complet
 brew install neovim
 ```
 ### (Optional but Recommend) NVChad
-You need to install NeoVim first
+You need to install NeoVim first [for additional](https://nvchad.com/docs/quickstart/install)
 ```zsh
 git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && nvim
 ```
