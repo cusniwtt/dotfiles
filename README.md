@@ -6,7 +6,7 @@ Cheat Sheet about Data Science/Data Engineer stuff with MacOS(zsh), Linux(bash),
 ```
 winget install -e --id Git.Git
 ```
-### NeoVim
+### NeoVim [for additional](https://github.com/neovim/neovim/wiki/Installing-Neovim)
 ```
 winget install Neovim.Neovim
 ```
@@ -54,6 +54,32 @@ sudo apt install ubuntu-drivers-common
 sudo ubuntu-drivers autoinstall
 nvidia-smi
 ```
+### NeoVim [for additioanl](https://github.com/neovim/neovim/wiki/Installing-Neovim)
+```
+sudo apt-get install software-properties-common
+sudo add-apt-repository ppa:neovim-ppa/stable
+sudo apt-get update
+sudo apt-get install neovim -y
+```
+### (Optional but Recommend) NVChad
+You need to install NeoVim first
+```
+git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && nvim
+```
 
 ---
 ## MacOS (Zsh)
+### (Must have!) Brew
+```
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+Dont forget to inspect installation process. It need to do after install complete. The Installation instsruction will lead you how to do.
+### NeoVim [for additioanal](https://github.com/neovim/neovim/wiki/Installing-Neovim)
+```
+brew install neovim
+```
+### (Optional but Recommend) NVChad
+You need to install NeoVim first
+```
+git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && nvim
+```
