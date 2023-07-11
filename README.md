@@ -3,7 +3,7 @@ Cheat Sheet about Data Science/Data Engineer stuff with MacOS(zsh), Linux(bash),
 
 ## Windows (Powershell)
 ### (Must have) Git
-```
+```powershell
 winget install -e --id Git.Git
 ```
 ### NeoVim [for additional](https://github.com/neovim/neovim/wiki/Installing-Neovim)
