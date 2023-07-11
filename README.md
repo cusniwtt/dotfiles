@@ -6,7 +6,11 @@ First step
 ```
 sudo apt update
 ```
-
+Install Neofetch
 ```
 sudo apt install neofetch -y
+```
+Install gcc
+```
+sudo apt install build-essential -y
 ```
