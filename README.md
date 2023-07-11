@@ -14,3 +14,9 @@ Install gcc
 ```
 sudo apt install build-essential -y
 ```
+(Optional) NVIDIA GPU [for additional information](https://ubuntu.com/tutorials/enabling-gpu-acceleration-on-ubuntu-on-wsl2-with-the-nvidia-cuda-platform#1-overview)
+```
+sudo apt install ubuntu-drivers-common
+sudo ubuntu-drivers autoinstall
+nvidia-smi
+```
