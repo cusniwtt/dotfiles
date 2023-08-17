@@ -58,7 +58,7 @@ nvidia-smi
 ### NeoVim [for additioanl](https://github.com/neovim/neovim/wiki/Installing-Neovim)
 ```bash
 sudo apt-get install software-properties-common
-sudo add-apt-repository ppa:neovim-ppa/stable
+sudo add-apt-repository ppa:neovim-ppa/unstable
 sudo apt-get update
 sudo apt-get install neovim -y
 ```
