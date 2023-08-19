@@ -37,7 +37,6 @@ nvim
 
 ---
 ## Linux (Bash or Zsh)
-> `apt` if Debian/Ubuntu, `pacman` if Arch
 ### (Must do!) First step
 ```bash
 sudo apt update && sudo apt upgrade -y
