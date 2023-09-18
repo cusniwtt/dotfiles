@@ -2,9 +2,9 @@
 Cheat Sheet about Data Science/Data Engineer stuff with MacOS(zsh), Linux(bash), and a little bit Windows(ps)
 
 #### Table of Contents
-- [Windows (Powershell)](## Windows)
-- [Linux (Bash or Zsh)](## Linux)
-- [MacOS (Zsh)](## MacOS)
+- [Windows (Powershell)](##Windows)
+- [Linux (Bash or Zsh)](##Linux)
+- [MacOS (Zsh)](##MacOS)
 - [Color](#color)
 
 ## Windows (Powershell)
