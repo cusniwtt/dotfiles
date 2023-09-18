@@ -1,12 +1,18 @@
 # dot-cheat-sheet
 Cheat Sheet about Data Science/Data Engineer stuff with MacOS(zsh), Linux(bash), and a little bit Windows(ps)
 
-<!-- toc-begin -->
-#### Table of Contents
-* [Windows](##Windows (Powershell))
-* [Linux](##Linux (Bash or Zsh))
-* [MacOS](##MacOS (Zsh))
-<!-- toc-end -->
+<!-- TOC start (generated with https://github.com/derlin/bitdowntoc) -->
+## Table of Contents
+- [Cool apps and dot-file config](#dot-cheat-sheet)
+  * [Windows (Powershell)](#windows-powershell)
+  * [Linux (Bash or Zsh)](#linux-bash-or-zsh)
+  * [MacOS (Zsh)](#macos-zsh)
+- [PostgreSQL](./markdown/postgres.md)
+  * [Login (Require)](./markdown/postgres.md/#login-require)
+  * [Postgres Command](./markdown/postgres.md/#postgres-command)
+  * [User / Role](./markdown/postgres.md/#user--role)
+
+<!-- TOC end -->
 
 ## Windows (Powershell)
 ### (Must have) Git
