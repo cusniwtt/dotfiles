@@ -1,11 +1,13 @@
 # dot-cheat-sheet
 Cheat Sheet about Data Science/Data Engineer stuff with MacOS(zsh), Linux(bash), and a little bit Windows(ps)
 
+<!-- toc-begin -->
 #### Table of Contents
-- [Windows (Powershell)](##Windows (Powershell))
-- [Linux (Bash or Zsh)](##Linux (Bash or Zsh))
-- [MacOS (Zsh)](##MacOS (Zsh))
-- [Color](#color)
+* [Windows (Powershell)](##Windows (Powershell))
+* [Linux (Bash or Zsh)](##Linux (Bash or Zsh))
+* [MacOS (Zsh)](##MacOS (Zsh))
+<!-- toc-end -->
+
 
 ## Windows (Powershell)
 ### (Must have) Git
