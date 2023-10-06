@@ -132,7 +132,7 @@ DROP USER <username>;
 ```
 #### Revoke Previleges
 ```SQL
-REVOKE ALL ON <username> FROM <schema_name>;
+REVOKE ALL ON ALL TABLES IN SCHEMA <schema_name> FROM <username>;
 ```
 #### Drop Owned (when denied privileges)
 ```SQL
