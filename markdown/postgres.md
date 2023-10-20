@@ -3,24 +3,110 @@ Cheat Sheet for using postgresql in admin-role and user-role
 
 <!-- TOC start (generated with https://github.com/derlin/bitdowntoc) -->
 ## Tables of Contens
+- [Best Practices](#best-practices)
 - [Login (Require)](#login-require)
 - [Postgres Command](#postgres-command)
-- [User / Role](#user--role)
+- [Role](#roles)
+- [User](#user)
 <!-- TOC end -->
 
 ## Best Practices
-[What is DDL and DML](https://www.geeksforgeeks.org/difference-between-ddl-and-dml-in-dbms/)
+[What is DDL and DML](https://www.geeksforgeeks.org/difference-between-ddl-and-dml-in-dbms/) The DDL and DML will common if you have 3 tier user. (Multi-Admin [as DDL], Multi-Write [as DML], Multi-Read [as DML]). 
+> In another way, You can use DDL as  `postgres` role. Which is default-superuser. If you only have 2 tier. (Single-Admin, Multi-Write [as DML], Multi-Read [as DML]) DO THIS WITH CAUTION! BECAUSE `postgres` IS SUPERUSER.
+### Initializing Database and Schema
 1. Create custom database for app
-2. Create custom schema for custom DB for app
-3. Create DDL role
-4. Create DML role
-5. Revoke ALL on created custom DB from PUBLIC
-6. Revoke create on schema PUBLIC into DB-ses postgres and created custom DB
-7. Grant USAGE and CREATE on custom schema for DDL role
-8. Grant only USAGE on custom schema for DML role
-9. Create user with DDL role for DDL app operations(for flyway or liquibase migrations, creating/alter/drop entities etc.)
-10. Create user with DML role for DML app operations(SELECT, INSERT, UPDATE, DELETE)
-11. !Under DDL user! Alter default privileges in custom schema to DML role
+```sql
+/* Create database */
+CREATE DATABASE <db_name>;
+
+/* For Security purpose. Revoke all privileges from PUBLIC */
+REVOKE ALL ON DATABASE <db_name> FROM PUBLIC;
+
+REVOKE CREATE ON SCHEMA public FROM PUBLIC;
+```
+2. Create custom schema for custom DB. (Dont use `public` is possible.)
+```sql
+CREATE SCHEMA <schema_name>;
+```
+### Initializing Role and Group Role
+3. Create DDL role (For 3 tier. If not, Skip this)
+```sql
+/* Create Role */
+CREATE ROLE <ddl_role> WITH NOLOGIN;
+
+/* Grant Connection to Role */
+GRANT CONNECT ON DATABASE <db_name> TO <ddl_role>;
+
+GRANT TEMPORARY ON DATABASE <db_name> TO <ddl_role>;
+```
+4. Create DML-Write role
+```sql
+CREATE ROLE <dml_write_role> WITH NOLOGIN;
+
+/* Grant Connection to Role */
+GRANT CONNECT ON DATABASE <db_name> TO <dml_write_role>;
+
+GRANT TEMPORARY ON DATABASE <db_name> TO <dml_write_role>;
+```
+5. Create DML-Read role
+```sql
+CREATE ROLE <dml_read_role> WITH NOLOGIN;
+
+/* Grant Connection to Role */
+GRANT CONNECT ON DATABASE <db_name> TO <dml_read_role>;
+
+GRANT TEMPORARY ON DATABASE <db_name> TO <dml_read_role>;
+```
+### Initailizing Grant Privileges
+6. Grant USAGE and CREATE on custom schema for DDL role
+```sql
+GRANT USAGE, CREATE ON SCHEMA <schema_name> TO <ddl_role>;
+```
+6. Grant only USAGE on custom schema for DML role
+```sql
+/* If 3 tier, Do not assign CREATE */
+GRANT USAGE, CREATE ON SCHEMA <schema_name> TO <dml_write_role>;
+
+/* assign USAGE only to DML_read */
+GRANT USAGE ON SCHEMA <schema_name> TO <dml_read_role>;
+```
+7. Create user with DDL role for DDL app operations(for flyway or liquibase migrations, creating/alter/drop entities etc.)
+```sql
+CREATE USER flywayuser WITH ENCRYPTED PASSWORD 'PWDPWD';
+GRANT <ddl_role> TO flywayuser;
+```
+8. Create user with DML role for DML app operations such as, SELECT(read), INSERT(write), UPDATE(write), DELETE(write)
+```sql
+/* for write */
+CREATE USER appuser_write WITH ENCRYPTED PASSWORD 'PWDPWD';
+GRANT <dml_write_role> to appuser_write;
+
+/* for read */
+CREATE USER appuser_read WITH ENCRYPTED PASSWORD 'PWDPWD';
+GRANT <dml_read_role> to appuser_read;
+```
+9. !Under DDL user! Alter default privileges in custom schema to DML role
+```sql
+/* If 3 tier */
+SET ROLE <ddl_role>;
+
+ALTER DEFAULT PRIVILEGES IN SCHEMA <schema_name>
+    GRANT INSERT, UPDATE, DELETE ON TABLES TO <dml_write>;
+
+ALTER DEFAULT PRIVILEGES IN SCHEMA <schema_name>
+    GRANT SELECT ON TABLES TO <dml_read>;
+
+/* If 2 tire */
+SET ROLE NONE;
+
+ALTER DEFAULT PRIVILEGES IN SCHEMA <schema_name>
+    GRANT INSERT, UPDATE, DELETE ON TABLES TO <dml_write>;
+
+SET ROLE <dml_write>;
+
+ALTER DEFAULT PRIVILEGES IN SCHEMA <schema_name>
+    GRANT SELECT ON TABLES TO <dml_read>;
+```
 
 ## Login (Require)
 Login for super admin
@@ -56,6 +142,7 @@ sudo -u postgres psql
 ```psql
 \dt
 \dt+ (for detail)
+\dt <schema_name>.* (for all tables in schema)
 ```
 ### List all users
 ```psql
