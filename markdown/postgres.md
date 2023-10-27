@@ -10,9 +10,8 @@ Cheat Sheet for using postgresql in admin-role and user-role
 - [User](#user)
 <!-- TOC end -->
 
-## Best Practices
+## Best Practices Method 1 (Dev+Read)
 [What is DDL and DML](https://www.geeksforgeeks.org/difference-between-ddl-and-dml-in-dbms/) The DDL and DML will common if you have 3 tier user. (Multi-Admin [as DDL], Multi-Write [as DML], Multi-Read [as DML]). 
-> In another way, You can use DDL as  `postgres` role. Which is default-superuser. If you only have 2 tier. (Single-Admin, Multi-Write [as DML], Multi-Read [as DML]) DO THIS WITH CAUTION! BECAUSE `postgres` IS SUPERUSER.
 ### Initializing Database and Schema
 1. Create custom database for app
 ```sql
@@ -29,7 +28,7 @@ REVOKE CREATE ON SCHEMA public FROM PUBLIC;
 CREATE SCHEMA <schema_name>;
 ```
 ### Initializing Role and Group Role
-3. Create DDL role (For 3 tier. If not, Skip this)
+3. Create DDL role.
 ```sql
 /* Create Role */
 CREATE ROLE <ddl_role> WITH NOLOGIN;
@@ -65,7 +64,7 @@ GRANT USAGE, CREATE ON SCHEMA <schema_name> TO <ddl_role>;
 6. Grant only USAGE on custom schema for DML role
 ```sql
 /* If 3 tier, Do not assign CREATE */
-GRANT USAGE, CREATE ON SCHEMA <schema_name> TO <dml_write_role>;
+GRANT USAGE ON SCHEMA <schema_name> TO <dml_write_role>;
 
 /* assign USAGE only to DML_read */
 GRANT USAGE ON SCHEMA <schema_name> TO <dml_read_role>;
@@ -85,26 +84,14 @@ GRANT <dml_write_role> to appuser_write;
 CREATE USER appuser_read WITH ENCRYPTED PASSWORD 'PWDPWD';
 GRANT <dml_read_role> to appuser_read;
 ```
-9. !Under DDL user! Alter default privileges in custom schema to DML role
+9. **!Under DDL user!** Alter default privileges in custom schema to DML role
 ```sql
-/* If 3 tier */
 SET ROLE <ddl_role>;
 
-ALTER DEFAULT PRIVILEGES IN SCHEMA <schema_name>
+ALTER DEFAULT PRIVILEGES IN SCHEMA <schema_name> FOR ROLE <ddl_role>
     GRANT INSERT, UPDATE, DELETE ON TABLES TO <dml_write>;
 
-ALTER DEFAULT PRIVILEGES IN SCHEMA <schema_name>
-    GRANT SELECT ON TABLES TO <dml_read>;
-
-/* If 2 tire */
-SET ROLE NONE;
-
-ALTER DEFAULT PRIVILEGES IN SCHEMA <schema_name>
-    GRANT INSERT, UPDATE, DELETE ON TABLES TO <dml_write>;
-
-SET ROLE <dml_write>;
-
-ALTER DEFAULT PRIVILEGES IN SCHEMA <schema_name>
+ALTER DEFAULT PRIVILEGES IN SCHEMA <schema_name> FOR ROLE <ddl_role>
     GRANT SELECT ON TABLES TO <dml_read>;
 ```
 
