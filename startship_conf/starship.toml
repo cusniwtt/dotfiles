@@ -103,7 +103,7 @@ renamed = "襁"
 deleted = " "
 
 [conda]
-symbol = ""
+symbol = "📦"
 ignore_base = false
 style = "fg:#86BBD8"
 format = 'on [$symbol $environment ]($style)'
