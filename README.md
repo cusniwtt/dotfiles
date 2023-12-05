@@ -15,6 +15,7 @@ Cheat Sheet about Data Science/Data Engineer stuff with MacOS(zsh), Linux(bash),
 <!-- TOC end -->
 
 ## Windows (Powershell)
+>Note: Windows part may need to update. I use this OS for Game PC Only LoL ;P
 ### (Must have) Git
 ```powershell
 winget install -e --id Git.Git
@@ -50,6 +51,7 @@ nvim
 
 ---
 ## Linux (Bash or Zsh)
+>Note: This part will aim to setup Linux with **Debian** base eg. Debian, Ubuntu etc. So, Instructon will cover only `apt` only.
 ### (Must do!) First step
 ```bash
 sudo apt update && sudo apt upgrade -y
@@ -83,7 +85,7 @@ git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && nvim
 
 ---
 ## MacOS (Zsh)
-### (Must have!) Brew
+### (Must have!) [Brew](https://brew.sh)
 ```zsh
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
