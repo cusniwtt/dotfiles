@@ -19,7 +19,7 @@ $nim\
 $rust\
 $scala\
 $package\
-$docker_context\
+$docker_context
 $character\
 """
 
@@ -59,30 +59,30 @@ disabled = false
 [directory]
 style = "fg:#DA627D"
 #format = "[ $path ]($style)"
-format = "LOCT: [$path]($style)[$read_only]($read_only_style) "
+format = "[$path]($style)[$read_only]($read_only_style) "
 truncation_length = 1
 truncation_symbol = "↳/"
 use_os_path_sep = true
 read_only = "🔒"
-home_symbol = "🏠 Homeland"
+#home_symbol = "🏠 Homeland"
 
 # Here is how you can shorten some long paths by text replacement
 # similar to mapped_locations in Oh My Posh:
 [directory.substitutions]
-"Documents" = "📂 Documents"
-"Downloads" = "📥 Downloads"
-"Music" = "🎧 Music"
-"Pictures" = "📷 Pictures"
-"Videos" = "🎞️ Videos"
-"Applications" = "🚀 Applications"
-"Desktop" = "🖥️ Desktop"
-"Playground" = '🧪 Playground'
-"Repositories" = '🚦 Repositories'
-"Developer" = "💻 Developer"
+#"Documents" = "📂 Documents"
+#"Downloads" = "📥 Downloads"
+#"Music" = "🎧 Music"
+#"Pictures" = "📷 Pictures"
+#"Videos" = "🎞️ Videos"
+#"Applications" = "🚀 Applications"
+#"Desktop" = "🖥️  Desktop"
+#"Playground" = '🧪 Playground'
+#"Repositories" = '🚦 Repositories'
+#"Developer" = "💻 Developer"
 
 [git_branch]
-symbol = " "
-format = "| [$symbol$branch]($style) "
+symbol = ""
+format = "on [$symbol $branch]($style) "
 # truncation_length = 4
 truncation_symbol = "…/"
 style = "fg:#FCA17D"
@@ -90,7 +90,7 @@ style = "fg:#FCA17D"
 [git_status]
 format = '[$all_status$ahead_behind]($style) '
 style = "fg:#FCA17D"
-conflicted = "❌"
+conflicted = ""
 up_to_date = " "
 untracked = " "
 ahead = "⇡${count}"
@@ -103,19 +103,19 @@ renamed = "襁"
 deleted = " "
 
 [conda]
-symbol = "📦"
+symbol = "🐍"
 ignore_base = false
 style = "fg:#86BBD8"
-format = 'on [$symbol $environment ]($style)'
+format = 'via [$symbol $environment ]($style)'
 
 [kubernetes]
 format = 'via [ﴱ $context\($namespace\)](bold purple) '
-disabled = false
+disabled = true
 
 # (deactivated because of no space left)
 [terraform]
 format = "via [ terraform $version]($style) 壟 [$workspace]($style) "
-disabled = false
+disabled = true
 
 [vagrant]
 format = "via [ vagrant $version]($style) "
@@ -123,14 +123,14 @@ disabled = true
 
 [docker_context]
 format = "via [ $context](bold blue) "
-disabled = false
+disabled = true
 
 [helm]
 format = "via [ $version](bold purple) "
 disabled = true
 
 [python]
-symbol = " "
+symbol = "🐍 "
 python_binary = "python3"
 disabled = true
 
@@ -164,8 +164,8 @@ disabled = true
 
 [time]
 disabled = false
-time_format = "%I:%M %p" # Hour:Minute Format
-#time_format = '%T' # Hour:Minute:Second Format
+#time_format = "%I:%M %p" # Hour:Minute Format
+time_format = '%T' # Hour:Minute:Second Format
 use_12hr = true
 style = "fg:#FFFFFF"
-format = '🐱 \[$time\]($style)'
+format = '🐱 $time($style)'
