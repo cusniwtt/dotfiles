@@ -21,6 +21,9 @@ sudo dnf install gstreamer1-plugins-{bad-\*,good-\*,base} gstreamer1-plugin-open
 sudo dnf install lame\* --exclude=lame-devel -y
 sudo dnf group upgrade --with-optional Multimedia --allowerasing -y
 
+# INSTALL NVIDIA DRIVER https://rpmfusion.org/Howto/NVIDIA
+sudo dnf install akmod-nvidia xorg-x11-drv-nvidia-cuda -y
+
 # Additional Apps
 flatpak remote-modify --enable flathub
 flatpak install flathub com.google.Chrome -y
