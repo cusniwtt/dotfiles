@@ -1,6 +1,6 @@
 # https://www.debugpoint.com/10-things-to-do-fedora-39-after-install/
-sudo echo "max_parallel_downloads=10" >> /etc/dnf/dnf.conf
-sudo echo "fastestmirror=True" >> /etc/dnf/dnf.conf
+echo "max_parallel_downloads=10" | sudo tee /etc/dnf/dnf.conf -a
+echo "fastestmirror=True" | sudo tee /etc/dnf/dnf.conf -a
 
 # System Update
 sudo dnf update -y
@@ -13,15 +13,12 @@ sudo dnf group update core
 gsettings set org.gnome.mutter auto-maximize false
 
 # Additional Apps
-sudo dnf install gnome-tweak-tool -y
 flatpak remote-modify --enable flathub
-
 flatpak install flathub com.google.Chrome -y
 flatpak install flathub com.discordapp.Discord -y
 flatpak install flathub com.valvesoftware.Steam -y
 flatpak install flathub com.mattjakeman.ExtensionManager -y
-
-sudo dnf install git gh htop btop neofetch neovim fzf bat exa unzip p7zip p7zip-plugins unrar curl wget kitty -y
+sudo dnf install git gh htop btop neofetch neovim fzf bat exa unzip p7zip p7zip-plugins unrar curl wget kitty gnome-tweak-tool -y
 
 # Nerd Font
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/SourceCodePro.zip
@@ -34,6 +31,7 @@ fc-cache -f -v
 
 # Starship
 curl -sS https://starship.rs/install.sh | sh
+starship preset gruvbox-rainbow -o ~/.config/starship.toml
 
 # Copy config files
 cp ../dot-files/.bashrc ~/
