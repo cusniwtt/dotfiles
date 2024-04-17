@@ -9,6 +9,9 @@ sudo dnf install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfre
 sudo dnf upgrade --refresh -y
 sudo dnf group update core
 
+# Gnome Setting
+gsettings set org.gnome.mutter auto-maximize false
+
 # Additional Apps
 sudo dnf install gnome-tweak-tool -y
 flatpak remote-modify --enable flathub
