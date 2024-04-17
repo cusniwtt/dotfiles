@@ -24,6 +24,14 @@ if [ -d ~/.bashrc.d ]; then
 fi
 unset rc
 
+# checks if exa command is available before setting the aliase
+if [ -x "$(command -v exa)" ]; then
+  alias ls="exa --classify --group-directories-first"
+  alias ll="exa --long --header --classify --group-directories-first --no-permissions"
+  alias la="exa -a --long --header --classify --group-directories-first"
+  alias lt="exa --tree --long --header --classify --group-directories-first"
+fi
+
 # Change cat to bat
 alias cat='bat --style=plain'
 
