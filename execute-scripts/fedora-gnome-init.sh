@@ -12,6 +12,15 @@ sudo dnf group update core
 # Gnome Setting
 gsettings set org.gnome.mutter auto-maximize false
 
+# Fix Firefox decoder
+sudo dnf config-manager --set-enabled fedora-cisco-openh264
+sudo dnf install gstreamer1-plugin-openh264 mozilla-openh264
+
+# INSTALLING ALL CODECS FOR FEDORA
+sudo dnf install gstreamer1-plugins-{bad-\*,good-\*,base} gstreamer1-plugin-openh264 gstreamer1-libav --exclude=gstreamer1-plugins-bad-free-devel -y
+sudo dnf install lame\* --exclude=lame-devel -y
+sudo dnf group upgrade --with-optional Multimedia --allowerasing -y
+
 # Additional Apps
 flatpak remote-modify --enable flathub
 flatpak install flathub com.google.Chrome -y
