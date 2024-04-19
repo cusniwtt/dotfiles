@@ -224,6 +224,9 @@ client.background       #FFFFFF
 #  status_command i3status
 #}
 
+# Screenshot tools
+bindsym $mod+p exec --no-startup-id ~/.config/rofi/applets/bin/screenshot.sh
+
 # Additional Preferencei
 default_orientation auto
 default_border pixel 3

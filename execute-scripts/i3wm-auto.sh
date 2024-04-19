@@ -1,6 +1,6 @@
 sudo dnf update -y
 
-sudo dnf install polybar picom -y
+sudo dnf install polybar picom viewnior xclip -y
 
 cp -r ../config-files/i3/ ~/.config/
 cp -r ../config-files/picom/ ~/.config/
