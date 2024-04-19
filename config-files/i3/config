@@ -30,7 +30,7 @@ exec_always for id in $(xinput list | grep "pointer" | cut -d '=' -f 2 | cut -f 
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 # Launch picom
-exec --no-startup-id picom --config ~/.config/picom/picom.conf -b
+exec_always --no-startup-id picom --config ~/.config/picom/picom.conf -b
 
 # Fixed Monitor (For 2 monitor; if 1 may not use)
 exec_always xrandr --fb 3000x1920 --output DP-4 --pos 0x0 --rotate left --output DP-0 --mode 1920x1080 --rate 100 --pos 1080x218 --primary
