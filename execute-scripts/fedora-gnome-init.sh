@@ -48,6 +48,8 @@ starship preset gruvbox-rainbow -o ~/.config/starship.toml
 # Copy config files
 cp ../dot-files/.bashrc ~/
 cp -r ../config-files/kitty/ ~/.config/
+cp .sync-conf.sh ~/
+cp -r ../config-files/neofetch/ ~/.config/
 
 # NVChad
 git clone https://github.com/NvChad/starter ~/.config/nvim && nvim
