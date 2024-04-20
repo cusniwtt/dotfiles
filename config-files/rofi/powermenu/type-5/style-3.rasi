@@ -14,13 +14,13 @@ configuration {
 
 /*****----- Global Properties -----*****/
 * {
-    font:                        "JetBrains Mono Nerd Font 10";
-    background:                  #231419;
-    background-alt:              #2D1E23;
-    foreground:                  #FFFFFF;
-    selected:                    #426647;
-    active:                      #2E3F34;
-    urgent:                      #D08261;
+    font:                        "SauceCodePro Nerd Font 10";
+    background:                  #282828FF;
+    background-alt:              #353535FF;
+    foreground:                  #EBDBB2FF;
+    selected:                    #83A598FF;
+    active:                      #B8BB26FF;
+    urgent:                      #FB4934FF;
 }
 
 /*
@@ -64,7 +64,7 @@ inputbar {
     spacing:                     0px;
     padding:                     100px 40px;
     background-color:            transparent;
-    background-image:            url("~/.config/rofi/images/e.jpg", width);
+    background-image:            url("~/.config/rofi/images/ign-waifu.png", width);
     children:                    [ "textbox-prompt-colon", "dummy","prompt"];
 }
 
@@ -75,18 +75,18 @@ dummy {
 textbox-prompt-colon {
     enabled:                     true;
     expand:                      false;
-    str:                         " System";
-    padding:                     12px;
+    str:                         " Powermenu";
+    padding:                     14px;
     border-radius:               5px;
     background-color:            @urgent;
-    text-color:                  @background;
+    text-color:                  @foreground;
 }
 prompt {
     enabled:                     true;
-    padding:                     12px;
+    padding:                     14px;
     border-radius:               5px;
     background-color:            @active;
-    text-color:                  @foreground;
+    text-color:                  @background;
 }
 
 /*****----- Listview -----*****/
