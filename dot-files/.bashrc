@@ -1,4 +1,5 @@
 # .bashrc
+neofetch
 
 # Source global definitions
 if [ -f /etc/bashrc ]; then
@@ -49,3 +50,5 @@ fzcd() {
     dir=$(find * -type d 2>/dev/null | fzf +m) && cd "$dir" || return
 }
 alias fd=fzcd
+
+alias sync-conf=./.sync-conf.sh
