@@ -51,4 +51,4 @@ fzcd() {
 }
 alias fd=fzcd
 
-alias sync-conf=./.sync-conf.sh
+alias sync-conf=~/.sync-conf.sh
