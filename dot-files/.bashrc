@@ -52,3 +52,5 @@ fzcd() {
 alias fd=fzcd
 
 alias sync-conf=~/.sync-conf.sh
+
+export PATH=$PATH:/home/cusniwtt/.spicetify
