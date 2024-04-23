@@ -23,7 +23,7 @@ sudo dnf group upgrade --with-optional Multimedia --allowerasing -y
 #sudo dnf install akmod-nvidia xorg-x11-drv-nvidia-cuda -y
 
 # Additional Apps; Nobara already have Steam, Discord
-flatpak remote-modify --enable flathub
+#flatpak remote-modify --enable flathub
 #flatpak install flathub com.google.Chrome -y
 #flatpak install flathub com.discordapp.Discord -y
 #flatpak install flathub com.valvesoftware.Steam -y
