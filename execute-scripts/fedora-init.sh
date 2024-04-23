@@ -34,12 +34,12 @@ flatpak install flathub com.mattjakeman.ExtensionManager -y
 sudo dnf install git gh htop btop neofetch neovim fzf bat exa unzip p7zip p7zip-plugins unrar curl wget kitty gnome-tweak-tool -y
 
 # Nerd Font
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/SourceCodePro.zip
-mkdir SourceCodePro
-unzip ./SourceCodePro.zip -d SourceCodePro/
+#wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/SourceCodePro.zip
+#mkdir SourceCodePro
+#unzip ./SourceCodePro.zip -d SourceCodePro/
 mkdir ~/.fonts
-mv SourceCodePro/ ~/.fonts/
-rm SourceCodePro.zip
+mv ../fonts/SourceCodePro/ ~/.fonts/
+mv ../fonts/Noto_Sans_Thai_Looped/ ~/.fonts/
 fc-cache -f -v
 
 # Starship
