@@ -14,7 +14,7 @@ gsettings set org.gnome.mutter auto-maximize false
 
 # Fix Firefox decoder
 sudo dnf config-manager --set-enabled fedora-cisco-openh264
-sudo dnf install gstreamer1-plugin-openh264 mozilla-openh264
+sudo dnf install gstreamer1-plugin-openh264 mozilla-openh264 -y
 
 # INSTALLING ALL CODECS FOR FEDORA
 sudo dnf install gstreamer1-plugins-{bad-\*,good-\*,base} gstreamer1-plugin-openh264 gstreamer1-libav --exclude=gstreamer1-plugins-bad-free-devel -y
@@ -25,6 +25,7 @@ sudo dnf group upgrade --with-optional Multimedia --allowerasing -y
 sudo dnf install akmod-nvidia xorg-x11-drv-nvidia-cuda -y
 
 # Additional Apps
+sudo dnf install flatpak -y
 flatpak remote-modify --enable flathub
 flatpak install flathub com.google.Chrome -y
 flatpak install flathub com.discordapp.Discord -y
