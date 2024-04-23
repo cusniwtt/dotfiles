@@ -1,7 +1,7 @@
 # Update package
 sudo dnf update -y
 # Install dependency for i3
-sudo dnf install @i3-desktop-environment polybar picom viewnior xclip lightdm slick-greeter -y
+sudo dnf install @i3-desktop-environment polybar picom viewnior xclip lightdm slick-greeter rofi -y
 
 cp -r ../config-files/i3/ ~/.config/
 cp -r ../config-files/picom/ ~/.config/
@@ -15,6 +15,6 @@ echo "Press mod+shift+r to reload config"
 
 # Change to lightdm
 sudo systemctl enable lightdm.service -f
-sudo cp -r ../config-files/lightdm/ /etc/lightdm/
+sudo cp -r ../config-files/lightdm/ /etc/
 echo "Restart to lightdm"
 sudo systemctl restart lightdm
