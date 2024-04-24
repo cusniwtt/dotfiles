@@ -32,6 +32,9 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 # Launch picom
 exec_always --no-startup-id picom --config ~/.config/picom/picom.conf -b
 
+# Autotiling from https://github.com/nwg-piotr/autotiling?tab=readme-ov-file
+exec_always --no-startup-id ~/.config/i3/autotiling
+
 # Fixed Monitor (For 2 monitor; if 1 may not use) Already set with lightdm
 #exec_always xrandr --fb 3000x1920 --output DP-4 --pos 0x0 --rotate left --output DP-0 --mode 1920x1080 --rate 100 --pos 1080x218 --primary
 
