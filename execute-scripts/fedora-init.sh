@@ -38,8 +38,8 @@ sudo dnf install git gh htop btop neofetch neovim fzf bat exa xinput unzip p7zip
 # Nerd Font
 #wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/SourceCodePro.zip
 mkdir ~/.fonts
-mv ../fonts/SourceCodePro/ ~/.fonts/
-mv ../fonts/Noto_Sans_Thai_Looped/ ~/.fonts/
+cp -r ../fonts/SourceCodePro/ ~/.fonts/
+cp -r ../fonts/Noto_Sans_Thai_Looped/ ~/.fonts/
 fc-cache -f -v
 
 # Starship
