@@ -24,7 +24,7 @@ sudo dnf install akmod-nvidia xorg-x11-drv-nvidia-cuda -y
 
 # Additional Apps
 sudo dnf install flatpak -y
-flatpak remote-modify --enable flathub
+flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 flatpak install flathub com.google.Chrome -y
 flatpak install flathub com.discordapp.Discord -y
 flatpak install flathub com.valvesoftware.Steam -y
