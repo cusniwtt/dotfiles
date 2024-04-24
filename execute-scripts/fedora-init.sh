@@ -9,10 +9,8 @@ sudo dnf install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfre
 sudo dnf upgrade --refresh -y
 sudo dnf group update core
 
-# Gnome Setting
-gsettings set org.gnome.mutter auto-maximize false
-
 # Fix Firefox decoder
+sudo dnf install firefox -y
 sudo dnf config-manager --set-enabled fedora-cisco-openh264
 sudo dnf install gstreamer1-plugin-openh264 mozilla-openh264 -y
 
@@ -30,13 +28,15 @@ flatpak remote-modify --enable flathub
 flatpak install flathub com.google.Chrome -y
 flatpak install flathub com.discordapp.Discord -y
 flatpak install flathub com.valvesoftware.Steam -y
-flatpak install flathub com.mattjakeman.ExtensionManager -y
-sudo dnf install git gh htop btop neofetch neovim fzf bat exa xinput unzip p7zip p7zip-plugins unrar curl wget kitty gnome-tweak-tool -y
+sudo dnf install git gh htop btop neofetch neovim fzf bat exa xinput unzip p7zip p7zip-plugins unrar curl wget kitty -y
+
+# Gnome Setting
+#gsettings set org.gnome.mutter auto-maximize false
+#flatpak install flathub com.mattjakeman.ExtensionManager -y
+#sudo dnf install gnome-tweak-tool -y
 
 # Nerd Font
 #wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/SourceCodePro.zip
-#mkdir SourceCodePro
-#unzip ./SourceCodePro.zip -d SourceCodePro/
 mkdir ~/.fonts
 mv ../fonts/SourceCodePro/ ~/.fonts/
 mv ../fonts/Noto_Sans_Thai_Looped/ ~/.fonts/
