@@ -13,19 +13,18 @@ sudo dnf group update core
 sudo dnf install firefox -y
 sudo dnf config-manager --set-enabled fedora-cisco-openh264
 sudo dnf install gstreamer1-plugin-openh264 mozilla-openh264 -y
-
 # INSTALLING ALL CODECS FOR FEDORA
 sudo dnf install gstreamer1-plugins-{bad-\*,good-\*,base} gstreamer1-plugin-openh264 gstreamer1-libav --exclude=gstreamer1-plugins-bad-free-devel -y
 sudo dnf install lame\* --exclude=lame-devel -y
 sudo dnf group upgrade --with-optional Multimedia --allowerasing -y
 
 # INSTALL NVIDIA DRIVER https://rpmfusion.org/Howto/NVIDIA
-sudo dnf install akmod-nvidia xorg-x11-drv-nvidia-cuda -y
+sudo dnf install akmod-nvidia xorg-x11-drv-nvidia-cuda libva libva-nvidia-driver -y
 
 # Additional Apps
 sudo dnf install flatpak -y
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-flatpak install flathub com.google.Chrome -y
+#flatpak install flathub com.google.Chrome -y
 flatpak install flathub com.discordapp.Discord -y
 flatpak install flathub com.valvesoftware.Steam -y
 sudo dnf install git gh htop btop neofetch neovim fzf bat exa xinput unzip p7zip p7zip-plugins unrar curl wget kitty -y
@@ -35,8 +34,9 @@ sudo dnf install git gh htop btop neofetch neovim fzf bat exa xinput unzip p7zip
 #flatpak install flathub com.mattjakeman.ExtensionManager -y
 #sudo dnf install gnome-tweak-tool -y
 
+# Fonts
+sudo dnf install -y adobe-source-code-pro-fonts fira-code-fonts fontawesome-fonts-all google-droid-sans-fonts google-noto-sans-cjk-fonts google-noto-color-emoji-fonts google-noto-emoji-fonts jetbrains-mono-fonts
 # Nerd Font
-#wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/SourceCodePro.zip
 mkdir ~/.fonts
 cp -r ../fonts/SourceCodePro/ ~/.fonts/
 cp -r ../fonts/Noto_Sans_Thai_Looped/ ~/.fonts/
