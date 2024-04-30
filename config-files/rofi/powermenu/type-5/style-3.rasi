@@ -15,12 +15,12 @@ configuration {
 /*****----- Global Properties -----*****/
 * {
     font:                        "SauceCodePro Nerd Font 10";
-    background:                  #282828FF;
-    background-alt:              #353535FF;
-    foreground:                  #EBDBB2FF;
-    selected:                    #83A598FF;
-    active:                      #B8BB26FF;
-    urgent:                      #FB4934FF;
+    background:                  #000000;
+    background-alt:              #111111;
+    foreground:                  #F0C674;
+    selected:                    #8ABEB7;
+    active:                      #B8BB26;
+    urgent:                      #A54242;
 }
 
 /*
