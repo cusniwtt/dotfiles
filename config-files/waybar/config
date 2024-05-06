@@ -10,7 +10,7 @@
         "hyprland/mode",
         "hyprland/scratchpad",
         "cpu",
-        "memory"
+        "memory",
         "network"
     ],
     "modules-center": [
