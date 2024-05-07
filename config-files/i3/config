@@ -39,7 +39,7 @@ exec_always --no-startup-id ~/.config/i3/autotiling
 exec setxkbmap -layout us,th -option 'grp:ctrl_space_toggle'
 
 # Fixed Monitor (For 2 monitor; if 1 may not use) Already set with lightdm
-exec_always xrandr --fb 3000x1920 --output DP-4 --pos 0x0 --rotate left --output DP-0 --mode 1920x1080 --rate 100 --pos 1080x218 --primary
+#exec_always xrandr --fb 3000x1920 --output DP-4 --pos 0x0 --rotate left --output DP-0 --mode 1920x1080 --rate 100 --pos 1080x218 --primary
 
 # Set up wallpaper
 exec_always feh --bg-fill ~/.config/i3/wallpaper/dune.jpg
@@ -236,5 +236,5 @@ bindsym $mod+p exec --no-startup-id ~/.config/rofi/applets/bin/screenshot.sh
 
 # Additional Preferencei
 default_orientation auto
-default_border pixel 2
+default_border pixel 3
 gaps inner 10
