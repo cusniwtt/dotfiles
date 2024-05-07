@@ -9,16 +9,12 @@
         "hyprland/workspaces",
         "hyprland/mode",
         "hyprland/scratchpad",
-        "cpu",
-        "memory",
-        "network"
+	"tray",
     ],
     "modules-center": [
         "hyprland/window"
     ],
     "modules-right": [
-        "custom/media",
-        "tray",
         "pulseaudio",
         "hyprland/language",
         "clock"
