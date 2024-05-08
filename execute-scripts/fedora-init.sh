@@ -27,7 +27,8 @@ flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.f
 #flatpak install flathub com.google.Chrome -y
 flatpak install flathub com.discordapp.Discord -y
 flatpak install flathub com.valvesoftware.Steam -y
-sudo dnf install git gh htop btop neofetch neovim fzf bat exa xinput unzip p7zip p7zip-plugins unrar curl wget kitty -y
+flatpak install flathub net.davidotek.pupgui2 -y
+sudo dnf install git gh ranger btop fastfetch neovim fzf bat exa xinput unzip p7zip p7zip-plugins unrar curl wget kitty -y
 
 # Gnome Setting
 #gsettings set org.gnome.mutter auto-maximize false
