@@ -1,15 +1,17 @@
 {
     //"layer": "top", // Waybar at top layer
     "position": "top", // Waybar position (top|bottom|left|right)
-    "height": 30, // Waybar height (to be removed for auto height)
+    //"height": 30, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
     "margin-top": 10,
-    "margin-left": 20,
-    "margin-right": 20,
+    "margin-left": 15,
+    "margin-right": 15,
     // Choose the order of the modules
     "modules-left": [
-        "hyprland/workspaces",
+        //"user",
+        //"hyprland/workspaces",
+        "group/os-workspaces",
         "hyprland/mode",
         "hyprland/scratchpad",
         "custom/pacman",
@@ -31,7 +33,7 @@
          "on-click": "activate",
          "format": "{icon}",
          "format-icons": {
-            "1": "",
+            "1": "",
             "2": "",
             "3": " "
             //"urgent": " ",
@@ -46,7 +48,9 @@
          //}
     },
     "hyprland/language": {
-	      "format": "  {short}"
+	      "format": "  {}",
+        "format-en": "ENG",
+        "format-th": "THA"
     },
     "hyprland/window": {
         "format": "  {title}"
@@ -61,21 +65,14 @@
         "tooltip": true,
         "tooltip-format": "{app}: {title}"
     },
-    "idle_inhibitor": {
-        "format": "{icon}",
-        "format-icons": {
-            "activated": " ",
-            "deactivated": " "
-        }
-    },
     "tray": {
-        "icon-size": 21,
+        "icon-size": 20,
         "spacing": 10
     },
     "clock": {
-        "format": "{:%H:%M}",
+        "format": "{:%d %B %Y %H:%M}",
         //"format-alt": "{:%d %B %Y %R }",
-        "tooltip-format": "{:%d %B %Y}"
+        //"tooltip-format": "{:%d %B %Y}"
     },
     "cpu": {
         "interval": 1,
@@ -95,16 +92,16 @@
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
         "interval": 1,
-        "format-ethernet": " ",
+        "format-ethernet": "  {ipaddr}",
         "tooltip-format": "  {bandwidthDownBits}   {bandwidthUpBits}",
         "format-linked": "No IP",
-        "format-disconnected": "Disconnected ⚠",
-        //"format-alt": "{ipaddr}",
+        "format-disconnected": "⚠ ",
+        //"format-alt": "󰩠 {ipaddr}",
         //"max-length": 50
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
-        "format": "{icon}  {volume}%  {format_source}",
+        "format": "{icon}  {volume}%",
         "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",
         "format-muted": " {format_source}",
@@ -137,6 +134,18 @@
         "exec-if": "exit 0",                  // always run; consider advanced run conditions
         "on-click": "termite -e 'sudo pacman -Syu'; pkill -SIGRTMIN+8 waybar", // update system
         "signal": 8
+    },
+    "user": {
+        "format": "  ",
+        "icon": true,
+    },
+    // Group workspaces
+    "group/os-workspaces": {
+        "orientation": "horizontal",
+        "modules": [
+            "user",
+            "hyprland/workspaces"
+        ]
     }
 }
 

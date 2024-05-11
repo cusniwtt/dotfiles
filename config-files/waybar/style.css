@@ -2,7 +2,7 @@
     border: none;
     border-radius: 0px;
     font-family: "Fira Sans Semibold", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
-    font-size: 16px;
+    font-size: 15px;
 }
 
 window#waybar {
@@ -71,13 +71,16 @@ window#waybar.chromium {
 #window,
 #custom-pacman,
 #hardware,
-#workspaces {
+#os-workspaces {
     padding: 0 4px;
     margin: 0 4px;
     color: #ffffff;
-    background-color: rgba(0, 0, 0, 0.6);
-    border: 3px solid #000000;
-    border-radius: 14px;
+    background-color: rgba(0, 0, 0, 1);
+    border: 4px solid #000000;
+    border-radius: 16px;
+}
+#user {
+    color: #1793d1;
 }
 
 /* If workspaces is the leftmost module, omit left margin */
