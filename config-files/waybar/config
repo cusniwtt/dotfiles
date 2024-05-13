@@ -9,8 +9,6 @@
     "margin-right": 15,
     // Choose the order of the modules
     "modules-left": [
-        //"user",
-        //"hyprland/workspaces",
         "group/os-workspaces",
         "hyprland/mode",
         "hyprland/scratchpad",
@@ -22,9 +20,6 @@
     ],
     "modules-right": [
         "tray",
-        //"pulseaudio",
-        //"hyprland/language",
-        //"network",
         "group/hardware",
         "clock"
     ],
@@ -138,6 +133,6 @@
             "user",
             "hyprland/workspaces"
         ]
-    }
+    },
 }
 
