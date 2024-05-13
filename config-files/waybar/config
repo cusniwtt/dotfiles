@@ -34,18 +34,10 @@
          "format": "{icon}",
          "format-icons": {
             "1": "",
-            "2": "",
+            "2": "",
             "3": " "
-            //"urgent": " ",
-            //"active": " ",
-            //"default": " "
          },
          "all-outputs": true
-         //"persistent-workspaces": {
-         //   "1": ["DP-3"],
-         //   "2": ["DP-1"],
-         //   "3": ["DP-1"]
-         //}
     },
     "hyprland/language": {
 	      "format": "  {}",

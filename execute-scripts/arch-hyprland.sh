@@ -10,7 +10,7 @@ sudo pacman -S yazi ffmpegthumbnailer unarchiver jq poppler fd ripgrep fzf zoxid
 cp -r ../config-files/hypr/ ~/.config/
 cp -r ../config-files/wofi/ ~/.config/
 cp -r ../config-files/waybar/ ~/.config/ 
-cp -r ../config-files/gtk-3.0/ ~/.config/
+cp -r ../config-files/wlogout/ ~/.config/
 
 git clone --depth=1 https://github.com/JaKooLit/Arch-Hyprland.git ~/Arch-Hyprland
 cd ~/Arch-Hyprland

@@ -15,6 +15,7 @@ if [ -d ~/.config/hypr ]; then
     rsync -avr ~/.config/hypr/ ~/Documents/dot-cheat-sheet/config-files/hypr
     rsync -avr ~/.config/waybar/ ~/Documents/dot-cheat-sheet/config-files/waybar
     rsync -avr ~/.config/wofi/ ~/Documents/dot-cheat-sheet/config-files/wofi
+    rsync -avr ~/.config/wlogout/ ~/Documents/dot-cheat-sheet/config-files/wlogout
 else
     echo "Hyprland config directory not found. Skipping..."
 fi
