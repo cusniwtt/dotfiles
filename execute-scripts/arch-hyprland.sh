@@ -3,7 +3,7 @@
 # This script is only dotfiles and configs config-files
 
 sudo pacman -S waybar hyprpaper
-yay -S pyprland
+yay -S pyprland hyprshot
 sudo pacman -S yazi ffmpegthumbnailer unarchiver jq poppler fd ripgrep fzf zoxide
 
 # Copy Config files
