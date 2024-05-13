@@ -4,6 +4,7 @@
 
 sudo pacman -S waybar hyprpaper
 yay -S pyprland
+sudo pacman -S yazi ffmpegthumbnailer unarchiver jq poppler fd ripgrep fzf zoxide
 
 # Copy Config files
 cp -r ../config-files/hypr/ ~/.config/

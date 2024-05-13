@@ -2,23 +2,16 @@
 
 plugins = [
   "scratchpads",
-  "magnify",
 ]
 
 [scratchpads.term]
 animation = "fromTop"
 command = "kitty --class kitty-dropterm"
 class = "kitty-dropterm"
-size = "75% 75%"
-
-[scratchpads.spofy]
-animation = "fromTop"
-command = "spotify-launcher"
-class = "spofy"
-size = "80% 80%"
+size = "60% 75%"
 
 [scratchpads.file]
 animation = "fromTop"
-command = "kitty ranger --class kitty-ranger"
-class = "kitty-ranger"
-size = "75% 75%"
+command = "kitty --class kitty-yazi yazi"
+class = "kitty-yazi"
+size = "60% 75%"
