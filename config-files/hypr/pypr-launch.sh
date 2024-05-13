@@ -1,0 +1,3 @@
+killall pypr
+
+pypr
