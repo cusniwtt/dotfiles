@@ -39,7 +39,7 @@ sudo dnf install git gh ranger btop fastfetch neovim fzf bat exa xinput unzip p7
 sudo dnf install -y adobe-source-code-pro-fonts fira-code-fonts fontawesome-fonts-all google-droid-sans-fonts google-noto-sans-cjk-fonts google-noto-color-emoji-fonts google-noto-emoji-fonts jetbrains-mono-fonts
 # Nerd Font
 mkdir ~/.fonts
-cp -r ../fonts/SourceCodePro/ ~/.fonts/
+cp -r ../fonts/SauceCodePro/ ~/.fonts/
 cp -r ../fonts/Noto_Sans_Thai_Looped/ ~/.fonts/
 fc-cache -f -v
 

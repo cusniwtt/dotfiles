@@ -6,7 +6,7 @@ sudo pacman -S fastfetch fzf btop rsync flatpak git ranger neovim bat exa xinput
 
 # Nerd Font
 mkdir ~/.fonts
-cp -r ../fonts/SourceCodePro/ ~/.fonts/
+cp -r ../fonts/SauceCodePro/ ~/.fonts/
 cp -r ../fonts/Noto_Sans_Thai_Looped/ ~/.fonts/
 fc-cache -f -v
 
