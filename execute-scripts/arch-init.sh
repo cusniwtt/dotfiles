@@ -3,6 +3,8 @@ sudo pacman -Syu
 
 # Install nessesary packages
 sudo pacman -S fastfetch fzf btop rsync github-cli flatpak git ranger neovim bat exa unzip p7zip unrar curl wget kitty -y
+# Remove not used
+sudo pacman -R dolphin
 
 # Nerd Font
 mkdir ~/.fonts

@@ -22,18 +22,8 @@ sudo dnf group upgrade --with-optional Multimedia --allowerasing -y
 sudo dnf install akmod-nvidia xorg-x11-drv-nvidia-cuda libva libva-nvidia-driver -y
 
 # Additional Apps
-sudo dnf install flatpak -y
+sudo dnf install git gh ranger btop fastfetch neovim flatpak fzf bat exa xinput unzip p7zip p7zip-plugins unrar curl wget kitty -y
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-#flatpak install flathub com.google.Chrome -y
-flatpak install flathub com.discordapp.Discord -y
-flatpak install flathub com.valvesoftware.Steam -y
-flatpak install flathub net.davidotek.pupgui2 -y
-sudo dnf install git gh ranger btop fastfetch neovim fzf bat exa xinput unzip p7zip p7zip-plugins unrar curl wget kitty -y
-
-# Gnome Setting
-#gsettings set org.gnome.mutter auto-maximize false
-#flatpak install flathub com.mattjakeman.ExtensionManager -y
-#sudo dnf install gnome-tweak-tool -y
 
 # Fonts
 sudo dnf install -y adobe-source-code-pro-fonts fira-code-fonts fontawesome-fonts-all google-droid-sans-fonts google-noto-sans-cjk-fonts google-noto-color-emoji-fonts google-noto-emoji-fonts jetbrains-mono-fonts
