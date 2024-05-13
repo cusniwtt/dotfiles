@@ -2,10 +2,15 @@
 # You need to install Hyprland From https://github.com/JaKooLit/Arch-Hyprland
 # This script is only dotfiles and configs files
 
-sudo pacman -S swaylock waybar hyprpaper
+git clone --depth=1 https://github.com/JaKooLit/Arch-Hyprland.git ~/Arch-Hyprland
+cd ~/Arch-Hyprland
+chmod +x install.sh
+./install.sh
+
+sudo pacman -S waybar hyprpaper libva-nvidia-driver
+yay -S pyprland
 
 # Copy Config files
 cp -r ../config-files/hypr/ ~/.config/
 cp -r ../config-files/wofi/ ~/.config/
 cp -r ../config-files/waybar/ ~/.config/ 
-cp -r ../config-files/swaylock/ ~/.config/

@@ -2,9 +2,7 @@
 sudo pacman -Syu
 
 # Install nessesary packages
-sudo pacman -Syu fastfetch fzf btop rsync flatpak git ranger neovim bat exa xinput unzip p7zip unrar curl wget kitty -y
-yay -S steam
-yay -S vesktop-bin
+sudo pacman -S fastfetch fzf btop rsync flatpak git ranger neovim bat exa xinput unzip p7zip unrar curl wget kitty -y
 
 # Nerd Font
 mkdir ~/.fonts
@@ -19,6 +17,7 @@ starship preset gruvbox-rainbow -o ~/.config/starship.toml
 # Copy config files
 cp ../dot-files/.bashrc ~/
 cp -r ../config-files/kitty/ ~/.config/
+cp -r ../config-files/wallpapers/ ~/.config/
 cp .sync-conf.sh ~/
 #cp -r ../config-files/neofetch/ ~/.config/
 
