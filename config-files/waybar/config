@@ -16,10 +16,12 @@
         "hyprland/window"
     ],
     "modules-center": [
-         
+        
     ],
     "modules-right": [
-        "tray",
+        //"custom/spotify",
+        //"tray",
+        "group/systray",
         "group/hardware",
         "clock"
     ],
@@ -40,7 +42,8 @@
         "format-th": "THA"
     },
     "hyprland/window": {
-        "format": "  {title}"
+        "format": "  {title}",
+        //"max-length": 50
     },
     "hyprland/mode": {
         "format": "<span style=\"italic\">{}</span>"
@@ -57,9 +60,9 @@
         "spacing": 10
     },
     "clock": {
-        "format": "{:%d %B %Y %H:%M}",
+        "format": "{:%H:%M}",
         //"format-alt": "{:%d %B %Y %R }",
-        //"tooltip-format": "{:%d %B %Y}"
+        "tooltip-format": "{:%d %B %Y}"
     },
     "cpu": {
         "interval": 1,
@@ -79,7 +82,7 @@
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
         "interval": 1,
-        "format-ethernet": "  {ipaddr}",
+        "format-ethernet": " ",
         "tooltip-format": "  {bandwidthDownBits}   {bandwidthUpBits}",
         "format-linked": "No IP",
         "format-disconnected": "⚠ ",
@@ -134,5 +137,23 @@
             "hyprland/workspaces"
         ]
     },
+    "custom/spotify": {
+        "exec": "/usr/bin/python3 ~/.config/waybar/mediaplayer.py --player spotify",
+        "format": "{}",
+        "tooltip-format": "{}",
+        "return-type": "json",
+        "on-click": "playerctl play-pause",
+        "on-scroll-up": "playerctl next",
+        "on-scroll-down": "playerctl previous",
+        "max-length": 25
+    },
+    // Group tray
+    "group/systray": {
+        "orientation": "horizontal",
+        "modules": [
+            "custom/spotify",
+            "tray"
+        ]
+    }
 }
 

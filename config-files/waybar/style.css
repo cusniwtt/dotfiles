@@ -71,6 +71,7 @@ window#waybar.chromium {
 #window,
 #custom-pacman,
 #hardware,
+#systray,
 #os-workspaces {
     padding: 0 4px;
     margin: 0 4px;
@@ -116,4 +117,12 @@ label:focus {
 
 #scratchpad.empty {
 	background-color: transparent;
+}
+
+.custom-spotify {
+    padding: 0 4px;
+    margin: 0 4px;
+    background-color: #1DB954;
+    color: black;
+    border-radius: 13px;
 }
