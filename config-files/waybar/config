@@ -19,8 +19,6 @@
         
     ],
     "modules-right": [
-        //"custom/spotify",
-        //"tray",
         "group/systray",
         "group/hardware",
         "clock"
@@ -126,15 +124,16 @@
         "on-click": "termite -e 'sudo pacman -Syu'; pkill -SIGRTMIN+8 waybar", // update system
         "signal": 8
     },
-    "user": {
+    "custom/os": {
         "format": "  ",
         "icon": true,
+        "on-click": "/usr/bin/python3 ~/.config/waybar/wallpaper.py"
     },
     // Group workspaces
     "group/os-workspaces": {
         "orientation": "horizontal",
         "modules": [
-            "user",
+            "custom/os",
             "hyprland/workspaces"
         ]
     },
