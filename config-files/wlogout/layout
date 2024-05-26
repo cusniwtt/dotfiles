@@ -4,9 +4,14 @@
     "text" : "Lock",
 }
 {
-    "label" : "reboot",
-    "action" : "systemctl reboot",
-    "text" : "Reboot",
+    "label" : "hibernate",
+    "action" : "systemctl hibernate",
+    "text" : "Hibernate",
+}
+{
+    "label" : "logout",
+    "action" : "loginctl terminate-user $USER",
+    "text" : "Logout",
 }
 {
     "label" : "shutdown",
@@ -14,17 +19,12 @@
     "text" : "Shutdown",
 }
 {
-    "label" : "logout",
-    "action" : "loginctl kill-session $XDG_SESSION_ID",
-    "text" : "Logout",
-}
-{
     "label" : "suspend",
-    "action" : "gsettings set org.gnome.desktop.interface gtk-theme Adwaita && gsettings set org.gnome.desktop.interface color-scheme prefer-light",
-    "text" : "Light Mode",
+    "action" : "systemctl suspend",
+    "text" : "Suspend",
 }
 {
-    "label" : "hibernate",
-    "action" : "gsettings set org.gnome.desktop.interface gtk-theme Adwaita-dark && gsettings set org.gnome.desktop.interface color-scheme prefer-dark",
-    "text" : "Dark Mode",
+    "label" : "reboot",
+    "action" : "systemctl reboot",
+    "text" : "Reboot",
 }
