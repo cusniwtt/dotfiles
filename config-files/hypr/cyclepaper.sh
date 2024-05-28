@@ -1,7 +1,8 @@
 #!/bin/bash
-
+user=$(eval echo ~$USER)
 # Define wallpaper path
-wallpaper_path="/home/cusniwtt/.config/wallpapers/"
+wallpaper_exist="/.config/wallpapers/"
+wallpaper_path="${user}${wallpaper_exist}"
 
 # Get all wallpapers
 wallpapers=($(ls -1 "${wallpaper_path}" | sort))
