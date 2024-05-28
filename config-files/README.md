@@ -9,6 +9,6 @@
 - polybar
 - rofi
 ## Hyprland
-- hypr
+- hypr (Keybinding in hypr/keybinding)
 - waybar
 - wofi
