@@ -127,7 +127,6 @@
     "custom/os": {
         "format": "  ",
         "icon": true,
-        "on-click": "/usr/bin/python3 ~/.config/waybar/wallpaper.py"
     },
     // Group workspaces
     "group/os-workspaces": {
