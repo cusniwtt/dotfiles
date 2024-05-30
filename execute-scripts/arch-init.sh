@@ -2,7 +2,7 @@
 sudo pacman -Syu
 
 # Install nessesary packages
-sudo pacman -S fastfetch fzf btop rsync github-cli flatpak git neovim bat exa unzip p7zip unrar curl wget kitty -y
+sudo pacman -S fastfetch fzf btop rsync github-cli bash-completion flatpak git neovim bat exa unzip p7zip unrar curl wget kitty -y
 # Remove not used
 sudo pacman -R dolphin
 
