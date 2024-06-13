@@ -20,6 +20,7 @@ starship preset gruvbox-rainbow -o ~/.config/starship.toml
 cp ../dot-files/.bashrc ~/
 cp -r ../config-files/kitty/ ~/.config/
 cp -r ../config-files/wallpapers/ ~/.config/
+ln -s ~/.config/wallpapers/ ~/Wallpapers/
 cp .sync-conf.sh ~/
 #cp -r ../config-files/neofetch/ ~/.config/
 
