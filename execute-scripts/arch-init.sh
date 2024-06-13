@@ -22,7 +22,11 @@ cp -r ../config-files/kitty/ ~/.config/
 cp -r ../config-files/wallpapers/ ~/.config/
 ln -s ~/.config/wallpapers/ ~/Wallpapers/
 cp .sync-conf.sh ~/
-#cp -r ../config-files/neofetch/ ~/.config/
+
+# Insall yay
+git clone https://aur.archlinux.org/yay.git ~/yay
+cd ~/yay
+makepkg -si
 
 # NVChad
 git clone https://github.com/NvChad/starter ~/.config/nvim && nvim
