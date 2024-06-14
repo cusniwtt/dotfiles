@@ -15,10 +15,15 @@ fc-cache -f -v
 curl -sS https://starship.rs/install.sh | sh
 starship preset gruvbox-rainbow -o ~/.config/starship.toml
 
+# Install fastfetch theme (Arch)
+mkdir ~/.local/share/fastfetch
+git clone https://github.com/LierB/fastfetch ~/.local/share/fastfetch
+
 # Copy config files
 cp ../dot-files/.bashrc ~/
 cp -r ../config-files/kitty/ ~/.config/
 cp -r ../config-files/wallpapers/ ~/.config/
+cp -r ../config-files/fastfetch/ ~/.config/
 ln -s ~/.config/wallpapers/ ~/Wallpapers/
 cp .sync-conf.sh ~/
 
@@ -26,6 +31,7 @@ cp .sync-conf.sh ~/
 git clone https://aur.archlinux.org/yay.git ~/yay
 cd ~/yay
 makepkg -si
+cd ~/
 
 # NVChad
 git clone https://github.com/NvChad/starter ~/.config/nvim && nvim

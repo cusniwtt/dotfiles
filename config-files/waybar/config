@@ -30,15 +30,15 @@
          "format-icons": {
             "1": "",
             "2": "",
-            "3": " ",
-            "4": " "
+            "3": "",
+            "4": ""
          },
          "all-outputs": true
     },
     "hyprland/language": {
 	      "format": "  {}",
-        "format-en": "ENG",
-        "format-th": "THA"
+        "format-en": "EN",
+        "format-th": "TH"
     },
     "hyprland/window": {
         "format": "  {title}",
@@ -82,7 +82,7 @@
         // "interface": "wlp2*", // (Optional) To force the use of this interface
         "interval": 1,
         "format-ethernet": " ",
-        "tooltip-format": "  {bandwidthDownBits}   {bandwidthUpBits}",
+        "tooltip-format": "{bandwidthDownBits} {bandwidthUpBits}",
         "format-linked": "No IP",
         "format-disconnected": "⚠ ",
         //"format-alt": "󰩠 {ipaddr}",
@@ -90,7 +90,7 @@
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
-        "format": "{icon}  {volume}%",
+        "format": "{icon} {volume}%",
         "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",
         "format-muted": " {format_source}",
@@ -117,7 +117,7 @@
         ]
     },
     "custom/pacman": {
-        "format": "    {}",
+        "format": " {}",
         "interval": 600,                     // every hour
         "exec": "checkupdates | wc -l",       // # of updates
         "exec-if": "exit 0",                  // always run; consider advanced run conditions

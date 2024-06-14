@@ -21,6 +21,7 @@ else
 fi
 
 # sync-conf auto update
+rsync -avr --delete ~/.config/fastfetch/ ~/Documents/dot-cheat-sheet/config-files/fastfetch
 rsync -avr --delete ~/.config/fish/ ~/Documents/dot-cheat-sheet/config-files/fish
 rsync -avr --delete ~/.config/kitty/ ~/Documents/dot-cheat-sheet/config-files/kitty
 rsync -avr --delete ~/.config/wallpapers/ ~/Documents/dot-cheat-sheet/config-files/wallpapers
