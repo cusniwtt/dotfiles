@@ -50,7 +50,7 @@ nvim
 ```
 
 ---
-## Linux (Bash or Zsh)
+## Ubuntu (Debian base distro)
 >Note: This part will aim to setup Linux with **Debian** base eg. Debian, Ubuntu etc. So, Instructon will cover only `apt` only.
 ### (Must do!) First step
 ```bash
@@ -84,6 +84,30 @@ git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && nvim
 ```
 
 ---
+
+## Arch (Arch base distro)
+Just simple run init scripts!
+```
+chmod +x ./execute-scripts/arch-init.sh && ./execute-scripts/arch-init.sh
+```
+For install Hyprland
+```
+chmod +x ./execute-scripts/arch-hyprland.sh && ./execute-scripts/arch-hyprland.sh
+```
+
+---
+
+## Fedora (RHEL base distro)
+Just simple run ini scripts!
+```
+chmod +x ./execute-scripts/fedora-init.sh && ./execute-scripts/fedora-init.sh
+```
+For install Hyprland
+```
+chmod +x ./execute-scripts/fedora-hyprland.sh && ./execute-scripts/fedora-hyprland.sh
+```
+---
+
 ## MacOS (Zsh)
 ### (Must have!) [Brew](https://brew.sh)
 ```zsh
