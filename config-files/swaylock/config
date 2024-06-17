@@ -1,0 +1,26 @@
+ignore-empty-password
+disable-caps-lock-text
+font=SauceCodePro Nerd Font
+#font-size=9
+
+image=~/.config/wallpapers/linux_terminal_wallpaper.png
+#screenshots
+
+effect-blur=3x3
+#effect-vignette=0.5:0.5
+indicator
+indicator-radius=150
+indicator-thickness=15
+clock
+timestr=%I:%M %p
+datestr=%A, %d %B
+ring-color=FFFFFF
+key-hl-color=00000066
+line-color=00000000
+separator-color=00000000
+inside-color=00000033
+bs-hl-color=FFFFFF
+layout-bg-color=00000066
+layout-border-color=FFFFFF
+layout-text-color=FFFFFF
+text-color=FFFFFF
