@@ -22,6 +22,7 @@ git clone https://github.com/LierB/fastfetch ~/.local/share/fastfetch
 # Copy config files
 cp ../dot-files/.bashrc ~/
 cp -r ../config-files/kitty/ ~/.config/
+cp -r ../config-files/fish/ ~/.config/
 cp -r ../config-files/wallpapers/ ~/.config/
 cp -r ../config-files/fastfetch/ ~/.config/
 ln -s ~/.config/wallpapers/ ~/Wallpapers/
