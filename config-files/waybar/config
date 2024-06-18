@@ -36,7 +36,7 @@
          "all-outputs": true
     },
     "hyprland/language": {
-	      "format": "  {}",
+	      "format": "{}",
         "format-en": "EN",
         "format-th": "TH"
     },
@@ -59,9 +59,9 @@
         "spacing": 10
     },
     "clock": {
-        "format": "{:%H:%M}",
+        "format": "{:%d %B  %R}",
         //"format-alt": "{:%d %B %Y %R }",
-        "tooltip-format": "{:%d %B %Y}"
+        //"tooltip-format": "{:%d %B %Y}"
     },
     "cpu": {
         "interval": 1,
@@ -81,16 +81,19 @@
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
         "interval": 1,
-        "format-ethernet": " ",
-        "tooltip-format": "{bandwidthDownBits} {bandwidthUpBits}",
+        "format-ethernet": "󰌗 ",
+        "tooltip": false,
+        //"tooltip-format": "{bandwidthDownBits} {bandwidthUpBits}",
         "format-linked": "No IP",
         "format-disconnected": "⚠ ",
-        //"format-alt": "󰩠 {ipaddr}",
+        "format-alt": "󰩠  {ipaddr}",
         //"max-length": 50
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
-        "format": "{icon} {volume}%",
+        "format": "{icon}",
+        "tooltip": true,
+        "tooltip-format": "{volume}%",
         "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",
         "format-muted": " {format_source}",
@@ -150,7 +153,7 @@
     "group/systray": {
         "orientation": "horizontal",
         "modules": [
-            "custom/spotify",
+            //"custom/spotify",
             "tray"
         ]
     }

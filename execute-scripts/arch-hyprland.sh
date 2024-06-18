@@ -2,7 +2,7 @@
 # You need to install Hyprland From https://github.com/JaKooLit/Arch-Hyprland
 # This script is only dotfiles and configs config-files
 
-sudo pacman -S waybar hyprpaper
+sudo pacman -S waybar hyprpaper cliphist swaylock wlogout wofi
 yay -S pyprland hyprshot
 sudo pacman -S yazi ffmpegthumbnailer unarchiver jq poppler fd ripgrep fzf zoxide
 
