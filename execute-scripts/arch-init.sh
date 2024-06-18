@@ -29,10 +29,9 @@ ln -s ~/.config/wallpapers/ ~/Wallpapers/
 cp .sync-conf.sh ~/
 
 # Insall yay
-git clone https://aur.archlinux.org/yay.git ~/yay
-cd ~/yay
+git clone https://aur.archlinux.org/yay.git ~/Documents/yay
+cd ~/Documents/yay
 makepkg -si
-cd ~/
 
 # NVChad
 git clone https://github.com/NvChad/starter ~/.config/nvim && nvim
