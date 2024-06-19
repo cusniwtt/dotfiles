@@ -2,9 +2,8 @@
 # You need to install Hyprland From https://github.com/JaKooLit/Arch-Hyprland
 # This script is only dotfiles and configs config-files
 
-sudo pacman -S waybar hyprpaper cliphist swaylock wlogout wofi
-yay -S pyprland hyprshot
-sudo pacman -S yazi ffmpegthumbnailer unarchiver jq poppler fd ripgrep fzf zoxide
+sudo pacman -S waybar hyprpaper cliphist swaylock wlogout wofi yazi ffmpegthumbnailer unarchiver jq poppler fd ripgrep fzf zoxide
+paru -S pyprland hyprshot
 
 # Copy Config files
 cp -r ../config-files/hypr/ ~/.config/
@@ -17,4 +16,3 @@ git clone --depth=1 https://github.com/JaKooLit/Arch-Hyprland.git ~/Documents/Ar
 cd ~/Documents/Arch-Hyprland
 chmod +x install.sh
 ./install.sh
-
