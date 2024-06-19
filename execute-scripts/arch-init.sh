@@ -5,20 +5,18 @@ sudo pacman -Syu
 sudo pacman -S fastfetch fzf btop rsync github-cli bash-completion flatpak git neovim bat exa unzip p7zip unrar curl wget kitty -y
 # Remove not used
 
+# Add git config
+./git-config-global.sh
+
 # Nerd Font with pac group + thai font
-#mkdir ~/.fonts
-#cp -r ../fonts/SauceCodePro/ ~/.fonts/
 sudo pacman -S $(pacman -Sgq nerd-fonts)
 cp -r ../fonts/Noto_Sans_Thai_Looped/ ~/.fonts/
 fc-cache -f -v
 
 # Starship
 curl -sS https://starship.rs/install.sh | sh
-starship preset gruvbox-rainbow -o ~/.config/starship.toml
-
-# Install fastfetch theme (Arch)
-mkdir ~/.local/share/fastfetch
-git clone https://github.com/LierB/fastfetch ~/.local/share/fastfetch
+#starship preset gruvbox-rainbow -o ~/.config/starship.toml
+starship preset jetpack -o ~/.config/starship.toml
 
 # Copy config files
 cp ../dot-files/.bashrc ~/
@@ -32,8 +30,8 @@ cp .sync-conf.sh ~/
 
 # Insall paru
 sudo pacman -S --needed base-devel
-git clone https://aur.archlinux.org/paru.git
-cd paru
+git clone https://aur.archlinux.org/paru.git ~/Documents/paru
+cd ~/Documents/paru
 makepkg -si
 
 # NVChad
