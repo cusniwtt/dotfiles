@@ -5,9 +5,10 @@ sudo pacman -Syu
 sudo pacman -S fastfetch fzf btop rsync github-cli bash-completion flatpak git neovim bat exa unzip p7zip unrar curl wget kitty -y
 # Remove not used
 
-# Nerd Font
-mkdir ~/.fonts
-cp -r ../fonts/SauceCodePro/ ~/.fonts/
+# Nerd Font with pac group + thai font
+#mkdir ~/.fonts
+#cp -r ../fonts/SauceCodePro/ ~/.fonts/
+sudo pacman -S $(pacman -Sgq nerd-fonts)
 cp -r ../fonts/Noto_Sans_Thai_Looped/ ~/.fonts/
 fc-cache -f -v
 
