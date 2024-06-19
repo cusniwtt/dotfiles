@@ -29,9 +29,10 @@ cp -r ../config-files/fastfetch/ ~/.config/
 ln -s ~/.config/wallpapers/ ~/Wallpapers/
 cp .sync-conf.sh ~/
 
-# Insall yay
-git clone https://aur.archlinux.org/yay.git ~/Documents/yay
-cd ~/Documents/yay
+# Insall paru
+sudo pacman -S --needed base-devel
+git clone https://aur.archlinux.org/paru.git
+cd paru
 makepkg -si
 
 # NVChad
