@@ -1,28 +1,28 @@
 {
-    //"layer": "top", // Waybar at top layer
+    "layer": "top", // Waybar at top layer
     "position": "top", // Waybar position (top|bottom|left|right)
-    //"height": 30, // Waybar height (to be removed for auto height)
-    // "width": 1280, // Waybar width
-    "spacing": 4, // Gaps between modules (4px)
+    "spacing": 2, // Gaps between modules (4px)
     "margin-top": 10,
-    "margin-left": 15,
-    "margin-right": 15,
+    "margin-left": 10,
+    "margin-right": 10,
+    
+
     // Choose the order of the modules
     "modules-left": [
         "group/os-workspaces",
-        "hyprland/mode",
-        "hyprland/scratchpad",
-        "custom/pacman",
-        "hyprland/window"
+        "custom/pacman"
+        //"hyprland/window"
     ],
     "modules-center": [
-        
+        "hyprland/window" 
     ],
     "modules-right": [
-        "group/systray",
+        "tray",
         "group/hardware",
         "clock"
     ],
+    
+
     // Modules configuration
     "hyprland/workspaces": {
          "on-click": "activate",
@@ -43,49 +43,22 @@
         "format": "  {title}",
         //"max-length": 50
     },
-    "hyprland/mode": {
-        "format": "<span style=\"italic\">{}</span>"
-    },
-    "hyprland/scratchpad": {
-        "format": "{icon} {count}",
-        "show-empty": false,
-        "format-icons": ["", " "],
-        "tooltip": true,
-        "tooltip-format": "{app}: {title}"
-    },
     "tray": {
-        "icon-size": 20,
-        "spacing": 10
+        "icon-size": 16,
+        "spacing": 6
     },
     "clock": {
-        "format": "{:%d %B  %R}",
-        //"format-alt": "{:%d %B %Y %R }",
+        "format": "{:%d %B %R}"
+        //"format-alt": "{:%d %B %Y %R}"
         //"tooltip-format": "{:%d %B %Y}"
     },
-    "cpu": {
-        "interval": 1,
-        "format": "  {usage}%",
-        "tooltip": false
-    },
-    "memory": {
-        "interval": 1,
-        "format": "   {used:0.1f} GB",
-    },
-    "disk": {
-        "interval": 1,
-        "format": " {specific_free:0.0f} GB",
-        "unit": "GB",
-        "path": "/"
-    },
     "network": {
-        // "interface": "wlp2*", // (Optional) To force the use of this interface
         "interval": 1,
         "format-ethernet": "󰌗 ",
         "tooltip": false,
-        //"tooltip-format": "{bandwidthDownBits} {bandwidthUpBits}",
         "format-linked": "No IP",
         "format-disconnected": "⚠ ",
-        "format-alt": "󰩠  {ipaddr}",
+        //"format-alt": "󰩠  {ipaddr}",
         //"max-length": 50
     },
     "pulseaudio": {
@@ -109,6 +82,7 @@
         },
         "on-click": "pavucontrol"
     },
+
     // Group Hardware
     "group/hardware": {
         "orientation": "horizontal",
@@ -126,11 +100,12 @@
         "on-click": "termite -e 'sudo pacman -Syu'; pkill -SIGRTMIN+8 waybar", // update system
         "signal": 8
     },
+
+    // Group workspaces
     "custom/os": {
-        "format": "  ",
+        "format": " ",
         "icon": true,
     },
-    // Group workspaces
     "group/os-workspaces": {
         "orientation": "horizontal",
         "modules": [
@@ -138,23 +113,6 @@
             "hyprland/workspaces"
         ]
     },
-    "custom/spotify": {
-        "exec": "/usr/bin/python3 ~/.config/waybar/mediaplayer.py --player spotify",
-        "format": "{}",
-        "tooltip-format": "{}",
-        "return-type": "json",
-        "on-click": "playerctl play-pause",
-        "on-scroll-up": "playerctl next",
-        "on-scroll-down": "playerctl previous",
-        "max-length": 25
-    },
-    // Group tray
-    "group/systray": {
-        "orientation": "horizontal",
-        "modules": [
-            //"custom/spotify",
-            "tray"
-        ]
-    }
+    
 }
 
