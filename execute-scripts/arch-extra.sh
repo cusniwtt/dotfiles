@@ -1,4 +1,4 @@
-paru -S thorium-browser vesktop arch-gaming-meta spotify-launcher docker docker-compose visual-studio-code-bin forticlient-vpn
+paru -S thorium-browser vesktop spotify-launcher
 
 sudo systemctl enable docker.service
 sudo systemctl start docker.service
