@@ -65,14 +65,17 @@ window#waybar.chromium {
     border-bottom: 3px solid #ffffff;
 }
 
-#clock,
+#clock-date-weather,
 #tray,
 #window,
 #custom-pacman,
+#custom-power,
+#custom-os,
 #hardware,
+#sysmon,
 #os-workspaces {
-    padding: 0 3px;
-    margin: 0 3px;
+    padding: 0 0.4em;
+    margin: 0 0px;
     color: #ffffff;
     background-color: rgba(0, 0, 0, 0.5);
     border: 3px solid rgba(0, 0, 0, 0);
@@ -80,9 +83,8 @@ window#waybar.chromium {
 }
 #custom-os {
     color: #1793d1;
-    padding: 0 0.4em;
-    border-radius: 14px;
 }
+
 
 /* If workspaces is the leftmost module, omit left margin */
 .modules-left > widget:first-child > #workspaces {

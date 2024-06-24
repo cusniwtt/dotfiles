@@ -8,11 +8,13 @@ plugins = [
 animation = "fromTop"
 command = "kitty --class kitty-dropterm"
 class = "kitty-dropterm"
-size = "60% 75%"
+position = "10% 10%"
+size = "80% 80%"
 
 [scratchpads.file]
 animation = "fromTop"
 command = "kitty --class kitty-yazi yazi"
 class = "kitty-yazi"
-size = "60% 75%"
+position = "10% 10%"
+size = "80% 80%"
 
