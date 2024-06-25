@@ -80,7 +80,7 @@
 
     "network": {
         "format-wifi": "   ({signalStrength}%)",
-        "format-ethernet": " 󰈀 ",
+        "format-ethernet": " ",
         "format-linked": "{ifname} (No IP) ",
         "format": "",
         "format-disconnected": "",
