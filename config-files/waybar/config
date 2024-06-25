@@ -66,36 +66,16 @@
 
     "cpu": {
         "interval": 1,
-        //"format": " {}%", // Icon: microchip
-        "format": "{max_frequency}GHz <span color=\"darkgray\">| {usage}%</span>",
-        "max-length": 13,
-        "min-length": 13
+        "format": "{usage}% ", // Icon: microchip
+        "max-length": 6,
+        "min-length": 6
     },
 
     "memory": {
         "interval": 1,
-        "format": "{used:0.1f} / {total:0.0f} GB",
-        "max-length": 13,
-        "min-length": 13
-    },
-
-    "battery": {
-        "interval": 2,
-        "states": {
-            "good": 95,
-            "warning": 30,
-            "critical": 15
-        },
-        "format": "{icon} {capacity}%",
-        "format-charging": " {capacity}%",
-        "format-plugged": " {capacity}%",
-        "format-icons": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+        "format": "{}% ",
+        "max-length": 6,
+        "min-length": 6
     },
 
     "network": {
@@ -173,19 +153,10 @@
     },
 
     "custom/weather": {
-        "format": "{}",
+        "format": " {}",
         "interval": 600,
         "exec": "curl -s 'https://wttr.in/?format=1'",
         "exec-if": "ping wttr.in -c1"
-    },
-
-    "custom/storage": {
-        "format": "{}B",
-        "format-alt": "{percentage}%",
-        "format-alt-click": "click-right",
-        "return-type": "json",
-        "interval": 1,
-        "exec": "~/.config/waybar/modules/storage.sh"
     },
 
     "custom/power": {
@@ -194,6 +165,14 @@
         "on-click": "wlogout"
     },
 
+    "custom/storage": {
+        "format": "{}  ",
+        "format-alt": "{percentage}% ",
+        "format-alt-click": "click-right",
+        "return-type": "json",
+        "interval": 60,
+        "exec": "~/.config/waybar/modules/storage.sh"
+    },
 
     // Group Hardware
     "group/hardware": {
@@ -224,9 +203,9 @@
     "group/sysmon": {
         "orientation": "horizontal",
         "modules": [
+            "custom/storage",
             "cpu",
-            "memory",
-            "custom/storage"
+            "memory"
         ]
     }
     
