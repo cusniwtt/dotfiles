@@ -20,12 +20,13 @@ starship preset jetpack -o ~/.config/starship.toml
 
 # Copy config files
 cp ../dot-files/.bashrc ~/
+cp ../dot-files/.zshrc ~/
 cp ../dot-files/.profile ~/
 cp -r ../config-files/kitty/ ~/.config/
 cp -r ../config-files/fish/ ~/.config/
 cp -r ../config-files/wallpapers/ ~/.config/
 cp -r ../config-files/fastfetch/ ~/.config/
-ln -s ~/.config/wallpapers/ ~/Wallpapers/
+ln -s ~/.config/wallpapers/ ~/Wallpapers
 cp .sync-conf.sh ~/
 
 # Insall paru
