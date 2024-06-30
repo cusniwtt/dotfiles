@@ -66,14 +66,14 @@
 
     "cpu": {
         "interval": 1,
-        "format": "{usage}% ", // Icon: microchip
+        "format": "{usage}% ", // Icon: microchip
         "max-length": 6,
         "min-length": 6
     },
 
     "memory": {
         "interval": 1,
-        "format": "{}% ",
+        "format": "{used:0.2f}G", // 
         "max-length": 6,
         "min-length": 6
     },
