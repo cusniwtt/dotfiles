@@ -9,4 +9,3 @@ if [ -d "$directory" ]; then
     hyprctl hyprpaper preload $selected
     hyprctl hyprpaper wallpaper ",$selected"
 fi
-
