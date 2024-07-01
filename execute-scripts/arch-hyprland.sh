@@ -3,7 +3,7 @@
 # This script is only dotfiles and configs config-files
 
 sudo pacman -S waybar hyprpaper cliphist wofi yazi ffmpegthumbnailer unarchiver jq poppler fd ripgrep fzf zoxide grim slurp swappy qt5-wayland qt6-wayland
-paru -S pyprland waypaper
+paru -S pyprland waypaper nwg-look
 
 # Copy Config files
 cp -r ../config-files/hypr/ ~/.config/
