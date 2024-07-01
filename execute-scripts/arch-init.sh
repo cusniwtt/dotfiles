@@ -2,7 +2,7 @@
 sudo pacman -Syu
 
 # Install nessesary packages
-sudo pacman -S fastfetch fzf btop rsync github-cli bash-completion flatpak git neovim bat exa unzip p7zip unrar curl wget kitty -y
+sudo pacman -S fastfetch fzf btop rsync github-cli bash-completion flatpak git neovim bat exa unzip p7zip unrar curl wget kitty capitaine-cursors -y
 # Remove not used
 
 # Add git config
@@ -22,6 +22,8 @@ starship preset jetpack -o ~/.config/starship.toml
 cp ../dot-files/.bashrc ~/
 cp ../dot-files/.zshrc ~/
 cp ../dot-files/.profile ~/
+cp ../config-files/gtk-3.0/ ~/.config/
+cp ../config-files/gtk-4.0/ ~/.config/
 cp -r ../config-files/kitty/ ~/.config/
 cp -r ../config-files/fish/ ~/.config/
 cp -r ../config-files/wallpapers/ ~/.config/
@@ -30,7 +32,7 @@ ln -s ~/.config/wallpapers/ ~/Wallpapers
 cp .sync-conf.sh ~/
 
 # Insall paru
-sudo pacman -S --needed base-devel
+sudo pacman -S --needed base-devel -y
 git clone https://aur.archlinux.org/paru.git ~/Documents/paru
 cd ~/Documents/paru
 makepkg -si
