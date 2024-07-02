@@ -2,7 +2,8 @@
 # You need to install Hyprland From https://github.com/JaKooLit/Arch-Hyprland
 # This script is only dotfiles and configs config-files
 
-sudo pacman -S waybar hyprpaper cliphist wofi yazi ffmpegthumbnailer unarchiver jq poppler fd ripgrep fzf zoxide grim slurp swappy qt5-wayland qt6-wayland
+sudo pacman -S waybar hyprpaper cliphist wofi yazi ffmpegthumbnailer unarchiver jq poppler fd ripgrep fzf zoxide grim slurp swappy 
+sudo pacman -S qt5-wayland qt6-wayland fcitx5 mako network-manager-applet polkit-kde-agent
 paru -S pyprland waypaper nwg-look
 
 # Copy Config files
