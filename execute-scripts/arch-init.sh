@@ -10,11 +10,6 @@ chsh -s /usr/bin/zsh
 # Add git config
 ./git-config-global.sh
 
-# Add cachyos repo
-curl https://mirror.cachyos.org/cachyos-repo.tar.xz -o ~/cachyos-repo.tar.xz
-tar xvf ~/cachyos-repo.tar.xz && cd ~/cachyos-repo
-sudo ~/cachyos-repo.sh
-
 # Nerd Font with pac group + thai font
 sudo pacman -S $(pacman -Sgq nerd-fonts)
 cp -r ../fonts/Noto_Sans_Thai_Looped/ ~/.fonts/
