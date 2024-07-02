@@ -19,8 +19,7 @@
     ],
     "modules-right": [
         "group/sysmon",
-        "group/hardware",
-        "custom/power"
+        "group/hardware"
     ],
 
     // Modules configuration
