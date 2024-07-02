@@ -77,9 +77,6 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 # Use history substring search
 source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
 
-# pkgfile "command not found" handler
-source /usr/share/doc/pkgfile/command-not-found.zsh
-
 export FZF_BASE=/usr/share/fzf
 
 # checks if exa command is available before setting the aliase

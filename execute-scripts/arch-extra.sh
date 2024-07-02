@@ -3,7 +3,7 @@ sudo pacman -S firefox spotify-launcher vlc gimp obs-studio
 
 # If this meta package is bloat. Install what u want. (Steam, protonupqt etc)
 echo "Install gaming-meta"
-sudo pacman -S cachyos-gaming-meta discord
+sudo pacman -S steam discord
 paru -S heroic-games-launcher
 
 # This need some step to complete. Watch instruction reference

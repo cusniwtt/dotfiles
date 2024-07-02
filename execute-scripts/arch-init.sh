@@ -35,8 +35,8 @@ cp .sync-conf.sh ~/
 
 # Insall paru
 sudo pacman -S --needed base-devel -y
-git clone https://aur.archlinux.org/paru.git ~/Documents/paru
-cd ~/Documents/paru
+git clone https://aur.archlinux.org/paru.git ~/paru
+cd ~/paru
 makepkg -si
 
 # NVChad
