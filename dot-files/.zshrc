@@ -99,9 +99,6 @@ alias vi="nvim"
 # Get ip
 alias pubip='curl ifconfig.co/'
 
-# Add shotcut cli
-alias atop="sudo asitop --color 7 --show_cores True"
-
 alias sync-conf="~/.sync-conf.sh"
 
 # fzf
