@@ -3,8 +3,8 @@ sudo pacman -S firefox spotify-launcher vlc gimp obs-studio
 
 # If this meta package is bloat. Install what u want. (Steam, protonupqt etc)
 echo "Install gaming-meta"
-sudo pacman -S steam discord
-paru -S heroic-games-launcher
+sudo pacman -S cachyos-gaming-meta
+sudo pacman -S discord
 
 # This need some step to complete. Watch instruction reference
 # reference -> https://computingforgeeks.com/install-kvm-qemu-virt-manager-arch-manjar/

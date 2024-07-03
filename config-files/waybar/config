@@ -76,6 +76,12 @@
         "max-length": 6,
         "min-length": 6
     },
+    
+    "disk": {
+        "format": "{free}  ",
+        "path": "/",
+        "interval": 30
+    },
 
     "network": {
         "format-wifi": "   ({signalStrength}%)",
@@ -164,15 +170,6 @@
         "on-click": "wlogout"
     },
 
-    "custom/storage": {
-        "format": "{}  ",
-        "format-alt": "{percentage}% ",
-        "format-alt-click": "click-right",
-        "return-type": "json",
-        "interval": 60,
-        "exec": "~/.config/waybar/modules/storage.sh"
-    },
-
     // Group Hardware
     "group/hardware": {
         "orientation": "horizontal",
@@ -202,7 +199,7 @@
     "group/sysmon": {
         "orientation": "horizontal",
         "modules": [
-            "custom/storage",
+            "disk",
             "cpu",
             "memory"
         ]

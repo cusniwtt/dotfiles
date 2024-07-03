@@ -4,7 +4,7 @@
 sudo pacman -S swaylock
 sudo pacman -S waybar hyprpaper cliphist wofi nemo grim slurp swappy nwg-look
 sudo pacman -S qt5-wayland qt6-wayland mako network-manager-applet polkit-kde-agent
-paru -S pyprland waypaper wlogout
+paru -S pyprland waypaper wlogout xwaylandvideobridge hyprshade
 
 # Copy Config files
 cp -r ../config-files/hypr/ ~/.config/

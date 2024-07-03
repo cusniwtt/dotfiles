@@ -2,8 +2,7 @@
 sudo pacman -Syu
 
 # Install nessesary packages
-sudo pacman -S libva-nvidia-driver zsh zsh-syntax-highlighting zsh-autosuggestions zsh-history-substring-search bash-completion git
-sudo pacman -S fastfetch fzf btop rsync github-cli neovim bat exa unzip p7zip unrar curl wget kitty capitaine-cursors pavucontrol -y
+sudo pacman -S libva-nvidia-driver zsh zsh-syntax-highlighting zsh-autosuggestions zsh-history-substring-search bash-completion git udiskie fastfetch fzf btop rsync github-cli neovim bat exa unzip p7zip unrar curl wget kitty capitaine-cursors pavucontrol appmenu-gtk-module libdbusmenu-glib
 chsh -s /usr/bin/zsh
 # Remove not used
 
