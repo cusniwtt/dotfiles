@@ -1,5 +1,7 @@
+#!/bin/bash
+
 # Update All packages
-sudo pacman -Syu
+sudo pacman -Syyu
 
 # Install nessesary packages
 sudo pacman -S libva-nvidia-driver zsh zsh-syntax-highlighting zsh-autosuggestions zsh-history-substring-search bash-completion git udiskie fastfetch fzf btop rsync github-cli neovim bat exa unzip p7zip unrar curl wget kitty capitaine-cursors pavucontrol appmenu-gtk-module libdbusmenu-glib

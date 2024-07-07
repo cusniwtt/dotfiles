@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # This scrit is not installation script, Before run this script
 # You need to install Hyprland From https://github.com/JaKooLit/Arch-Hyprland
 # This script is only dotfiles and configs config-files
@@ -16,4 +18,9 @@ cp -r ../config-files/wlogout/ ~/.config/
 sudo pacman -S ly
 sudo cp ../config-files/ly/config.ini /etc/ly/
 sudo systemctl enable ly.service -f
-sudo systemctl restart ly.service
+
+# You need to install Hyprland From https://github.com/JaKooLit/Arch-Hyprland
+git clone --depth=1 https://github.com/JaKooLit/Arch-Hyprland.git ~/Arch-Hyprland
+cd ~/Arch-Hyprland
+chmod +x install.sh
+./install.sh

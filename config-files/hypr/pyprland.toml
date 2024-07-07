@@ -10,11 +10,3 @@ command = "kitty --class kitty-dropterm"
 class = "kitty-dropterm"
 position = "10% 10%"
 size = "80% 80%"
-
-[scratchpads.file]
-animation = "fromTop"
-command = "kitty --class kitty-yazi yazi"
-class = "kitty-yazi"
-position = "10% 10%"
-size = "80% 80%"
-
