@@ -78,7 +78,7 @@ window#waybar.chromium {
     margin: 0 0px;
     color: #ffffff;
     background-color: rgba(0, 0, 0, 0.8);
-    border: 3px solid rgba(0, 0, 0, 0);
+    border: 2px solid rgba(0, 0, 0, 0.8);
     border-radius: 14px;
 }
 #custom-os {
