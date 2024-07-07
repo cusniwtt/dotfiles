@@ -8,5 +8,14 @@ plugins = [
 animation = "fromTop"
 command = "kitty --class kitty-dropterm"
 class = "kitty-dropterm"
-position = "10% 10%"
-size = "80% 80%"
+size = "70% 80%"
+max_size = "1920px 100%"
+margin = 50
+
+[scratchpads.files]
+animation = "fromTop"
+command = "nemo"
+class = "nemo-dropterm"
+size = "70% 80%"
+max_size = "1920px 100%"
+margin = 50
