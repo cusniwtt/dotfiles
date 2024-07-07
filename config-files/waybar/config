@@ -4,7 +4,7 @@
     "spacing": 5, // Gaps between modules (4px)
     "margin-top": 10,
     "margin-left": 10,
-    "margin-right": 15,
+    "margin-right": 10,
     "margin-bottom": 0,
 
     // Choose the order of the modules
@@ -46,7 +46,7 @@
     },
 
     "tray": {
-        "icon-size": 15,
+        "icon-size": 16,
         "spacing": 5
     },
 
@@ -65,20 +65,20 @@
 
     "cpu": {
         "interval": 1,
-        "format": "{usage}% ", // Icon: microchip
-        "max-length": 6,
-        "min-length": 6
+        "format": "{usage}%  ", // Icon: microchip
+        "max-length": 7,
+        "min-length": 7
     },
 
     "memory": {
         "interval": 1,
-        "format": "{used:0.2f}G", // 
-        "max-length": 6,
-        "min-length": 6
+        "format": "{used:0.2f}GiB", // 
+        "max-length": 8,
+        "min-length": 8
     },
     
     "disk": {
-        "format": "{free}  ",
+        "format": "{free}   ",
         "path": "/",
         "interval": 30
     },
@@ -144,7 +144,7 @@
 
     // Custom modules
     "custom/pacman": {
-        "format": " {}",
+        "format": "  {}",
         "interval": 600,                     // every hour
         "exec": "checkupdates | wc -l",       // # of updates
         "exec-if": "exit 0",                  // always run; consider advanced run conditions
