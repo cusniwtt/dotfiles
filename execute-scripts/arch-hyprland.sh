@@ -11,8 +11,7 @@ paru -S pyprland waypaper xwaylandvideobridge hyprshade
 cp -r ../config-files/hypr/ ~/.config/
 cp -r ../config-files/wofi/ ~/.config/
 cp -r ../config-files/waybar/ ~/.config/ 
-cp -r ../config-files/swaylock/ ~/.config/
-cp -r ../config-files/wlogout/ ~/.config/
+cp -r ../config-files/waypaper/ ~/.config/
 
 # Enable ly as SDDM
 sudo pacman -S ly

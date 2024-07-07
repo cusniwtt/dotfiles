@@ -29,9 +29,7 @@ sudo cp ../config-files/icons/default/index.theme /usr/share/icons/default/
 cp -r ../config-files/gtk-3.0/ ~/.config/
 cp -r ../config-files/gtk-4.0/ ~/.config/
 cp -r ../config-files/kitty/ ~/.config/
-cp -r ../config-files/fish/ ~/.config/
 cp -r ../config-files/wallpapers/ ~/.config/
-cp -r ../config-files/fastfetch/ ~/.config/
 ln -s ~/.config/wallpapers/ ~/Wallpapers
 cp .sync-conf.sh ~/
 
