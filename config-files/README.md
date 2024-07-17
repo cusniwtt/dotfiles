@@ -1,13 +1,12 @@
 # Addition note
 ## Casual
 - kitty
-- fish (with CachyOS)
 - fastfetch
 - starship
 ## Hyprland
 - hypr (Keybinding in hypr/keybinding)
-- swaylock
+- ~~swaylock~~ --> hyprctl exit
 - waybar
-- wlogout
+- ~~wlogout~~ --> hyprctl exit
 - wofi
-- yazi
+- ~~yazi~~ --> nemo
