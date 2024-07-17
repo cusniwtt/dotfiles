@@ -36,6 +36,8 @@
 
     "hyprland/language": {
 	      "format": "{}",
+        "min-length": 3,
+        "max-length": 3,
         "format-en": "EN",
         "format-th": "TH"
     },
