@@ -4,7 +4,9 @@
 sudo pacman -Syyu
 
 # Install nessesary packages
-sudo pacman -S libva-nvidia-driver zsh zsh-syntax-highlighting zsh-autosuggestions zsh-history-substring-search bash-completion git udiskie fastfetch fzf btop rsync github-cli neovim bat exa unzip p7zip unrar curl wget kitty capitaine-cursors pavucontrol appmenu-gtk-module libdbusmenu-glib
+sudo pacman -S libva-nvidia-driver zsh zsh-syntax-highlighting zsh-autosuggestions zsh-history-substring-search \
+      bash-completion git udiskie fastfetch fzf btop rsync github-cli neovim bat exa unzip p7zip unrar curl wget \
+      kitty capitaine-cursors pavucontrol appmenu-gtk-module libdbusmenu-glib pipewire-audio pipewire-pulse
 chsh -s /usr/bin/zsh
 # Remove not used
 
@@ -12,6 +14,7 @@ chsh -s /usr/bin/zsh
 ./git-config-global.sh
 
 # Nerd Font with pac group + thai font
+sudo pacman -S noto-fonts
 sudo pacman -S $(pacman -Sgq nerd-fonts)
 cp -r ../fonts/Noto_Sans_Thai_Looped/ ~/.fonts/
 fc-cache -f -v
