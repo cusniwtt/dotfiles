@@ -9,13 +9,20 @@ sudo pacman -S libva-nvidia-driver zsh zsh-syntax-highlighting zsh-autosuggestio
       kitty capitaine-cursors pavucontrol appmenu-gtk-module libdbusmenu-glib pipewire-audio pipewire-pulse
 chsh -s /usr/bin/zsh
 # Remove not used
+sudo pacman -R dolphin
+
+# Insall paru
+sudo pacman -S --needed base-devel -y
+git clone https://aur.archlinux.org/paru.git ~/paru
+cd ~/paru
+makepkg -si
+rm -rf ~/paru
 
 # Add git config
 ./git-config-global.sh
 
 # Nerd Font with pac group + thai font
-sudo pacman -S noto-fonts
-sudo pacman -S $(pacman -Sgq nerd-fonts)
+paru -S all-repository-fonts
 cp -r ../fonts/Noto_Sans_Thai_Looped/ ~/.fonts/
 fc-cache -f -v
 
@@ -36,11 +43,9 @@ cp -r ../config-files/wallpapers/ ~/.config/
 ln -s ~/.config/wallpapers/ ~/Wallpapers
 cp .sync-conf.sh ~/
 
-# Insall paru
-sudo pacman -S --needed base-devel -y
-git clone https://aur.archlinux.org/paru.git ~/paru
-cd ~/paru
-makepkg -si
-
-# NVChad
-git clone https://github.com/NvChad/starter ~/.config/nvim && nvim
+# LazyVim
+mv ~/.config/nvim{,.bak}
+mv ~/.local/share/nvim{,.bak}
+mv ~/.local/state/nvim{,.bak}
+mv ~/.cache/nvim{,.bak}
+git clone https://github.com/LazyVim/starter ~/.config/nvim
