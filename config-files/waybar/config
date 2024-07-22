@@ -182,8 +182,8 @@
     "group/clock-date-weather": {
         "orientation": "horizontal",
         "modules": [
-            "clock#date",
-            "custom/weather"
+            "clock#date"
+            //"custom/weather"
         ]
     },
 
