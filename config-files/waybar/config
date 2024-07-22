@@ -10,14 +10,13 @@
     // Choose the order of the modules
     "modules-left": [
         "group/os-workspaces",
-        "custom/pacman",
-        "tray"
+        "hyprland/window"
     ],
     "modules-center": [
-        //"hyprland/window"
         "group/clock-date-weather"
     ],
     "modules-right": [
+        "tray",
         "group/sysmon",
         "group/hardware"
     ],
@@ -142,16 +141,6 @@
             "car": " ",
             "default": [" ", " ", " "]
         },
-    },
-
-    // Custom modules
-    "custom/pacman": {
-        "format": "  {}",
-        "interval": 600,                     // every hour
-        "exec": "checkupdates | wc -l",       // # of updates
-        "exec-if": "exit 0",                  // always run; consider advanced run conditions
-        "on-click": "termite -e 'sudo pacman -Syu'; pkill -SIGRTMIN+8 waybar", // update system
-        "signal": 8
     },
 
     "custom/os": {
