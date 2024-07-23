@@ -66,11 +66,12 @@ window#waybar.chromium {
     border-bottom: 3px solid #ffffff;
 }
 
-#clock-date-weather,
+#clock,
 #tray,
 #window,
 #custom-pacman,
 #custom-power,
+#custom-weather,
 #hardware,
 #sysmon,
 #os-workspaces {

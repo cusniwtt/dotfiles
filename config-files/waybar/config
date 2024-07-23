@@ -10,13 +10,13 @@
     // Choose the order of the modules
     "modules-left": [
         "group/os-workspaces",
-        "hyprland/window"
+        "custom/weather",
+        "tray"
     ],
     "modules-center": [
-        "group/clock-date-weather"
+        "clock#date"
     ],
     "modules-right": [
-        "tray",
         "group/sysmon",
         "group/hardware"
     ],
@@ -149,7 +149,7 @@
     },
 
     "custom/weather": {
-        "format": " {}",
+        "format": "{}",
         "interval": 600,
         "exec": "curl -s 'https://wttr.in/?format=1'",
         "exec-if": "ping wttr.in -c1"
@@ -176,14 +176,6 @@
         "modules": [
             "custom/os",
             "hyprland/workspaces"
-        ]
-    },
-
-    "group/clock-date-weather": {
-        "orientation": "horizontal",
-        "modules": [
-            "clock#date"
-            //"custom/weather"
         ]
     },
 
