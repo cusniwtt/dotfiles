@@ -80,11 +80,11 @@ source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring
 export FZF_BASE=/usr/share/fzf
 
 # checks if exa command is available before setting the aliase
-if [ -x "$(command -v exa)" ]; then
-  alias ls="exa --classify --group-directories-first"
-  alias ll="exa --long --header --classify --group-directories-first --no-permissions"
-  alias la="exa -a --long --header --classify --group-directories-first"
-  alias lt="exa --tree --long --header --classify --group-directories-first"
+if [ -x "$(command -v eza)" ]; then
+  alias ls="eza -F --group-directories-first"
+  alias ll="eza -l -F --group-directories-first"
+  alias la="eza -la -F --group-directories-first"
+  alias lt="eza -T -F --group-directories-first"
 fi
 
 # Change cat to bat
