@@ -47,11 +47,5 @@ cp -r ../config-files/wallpapers/ ~/.config/
 ln -s ~/.config/wallpapers/ ~/Wallpapers
 cp .sync-conf.sh ~/
 
-# LazyVim
-mv ~/.config/nvim{,.bak}
-mv ~/.local/share/nvim{,.bak}
-mv ~/.local/state/nvim{,.bak}
-mv ~/.cache/nvim{,.bak}
-git clone https://github.com/LazyVim/starter ~/.config/nvim
-rm -rf ~/.config/nvim/.git
-nvim
+# NVChad
+git clone https://github.com/NvChad/starter ~/.config/nvim && nvim
