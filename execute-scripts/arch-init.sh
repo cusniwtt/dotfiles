@@ -1,12 +1,14 @@
 #!/bin/bash
 
+LAUNCH_PATH=$(pwd)
+echo $LAUNCH_PATH
 # Update All packages
-sudo pacman -Syyu
+sudo pacman -Syu
 
 # Install nessesary packages
 sudo pacman -S libva-nvidia-driver zsh zsh-syntax-highlighting zsh-autosuggestions zsh-history-substring-search \
-      bash-completion git udiskie fastfetch fzf btop rsync github-cli neovim bat exa unzip p7zip unrar curl wget \
-      kitty capitaine-cursors pavucontrol appmenu-gtk-module libdbusmenu-glib pipewire-audio pipewire-pulse
+  bash-completion git udiskie fastfetch fzf btop rsync github-cli neovim bat exa unzip p7zip unrar curl wget \
+  kitty capitaine-cursors pavucontrol appmenu-gtk-module libdbusmenu-glib pipewire-audio pipewire-pulse
 chsh -s /usr/bin/zsh
 # Remove not used
 sudo pacman -R dolphin
@@ -17,6 +19,8 @@ git clone https://aur.archlinux.org/paru.git ~/paru
 cd ~/paru
 makepkg -si
 rm -rf ~/paru
+
+cd $LAUNCH_PATH
 
 # Add git config
 ./git-config-global.sh
