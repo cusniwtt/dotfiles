@@ -14,6 +14,7 @@ fi
 # sync-conf auto update
 rsync -avr --delete ~/.config/kitty/ ~/Documents/dot-cheat-sheet/config-files/kitty
 rsync -avr --delete ~/.config/wallpapers/ ~/Documents/dot-cheat-sheet/config-files/wallpapers
+rsync -avr --delete ~/.config/fastfetch/ ~/Documents/dot-cheat-sheet/config-files/fastfetch
 rsync -av ~/.sync-conf.sh ~/Documents/dot-cheat-sheet/execute-scripts
 rsync -av ~/.bashrc ~/Documents/dot-cheat-sheet/dot-files
 rsync -av ~/.zshrc ~/Documents/dot-cheat-sheet/dot-files
