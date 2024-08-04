@@ -1,7 +1,8 @@
 #!/bin/bash
 
 echo "Install basic utility software"
-sudo pacman -S firefox spotify-launcher vlc obs-studio
+sudo pacman -S spotify-launcher vlc obs-studio
+paru -S google-chrome
 
 # If this meta package is bloat. Install what u want. (Steam, protonupqt etc)
 echo "Install gaming-meta"
