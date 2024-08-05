@@ -13,12 +13,12 @@ chsh -s /usr/bin/zsh
 # Remove not used
 sudo pacman -R dolphin
 
-# Insall paru
-sudo pacman -S --needed base-devel -y
-git clone https://aur.archlinux.org/paru.git ~/paru
-cd ~/paru
+# Insall yay
+sudo pacman -S --needed base-devel
+git clone https://aur.archlinux.org/yay.git ~/yay
+cd ~/yay
 makepkg -si
-rm -rf ~/paru
+rm -rf ~/yay
 
 cd $LAUNCH_PATH
 
@@ -26,7 +26,7 @@ cd $LAUNCH_PATH
 ./git-config-global.sh
 
 # Nerd Font with pac group + thai font
-paru -S all-repository-fonts
+yay -S all-repository-fonts
 cp -r ../fonts/Noto_Sans_Thai_Looped/ ~/.fonts/
 fc-cache -f -v
 

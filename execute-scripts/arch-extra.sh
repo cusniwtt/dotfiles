@@ -2,7 +2,7 @@
 
 echo "Install basic utility software"
 sudo pacman -S spotify-launcher vlc obs-studio
-paru -S google-chrome
+yay -S thorium-browser-bin
 
 # If this meta package is bloat. Install what u want. (Steam, protonupqt etc)
 echo "Install gaming-meta"
