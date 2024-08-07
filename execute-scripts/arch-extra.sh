@@ -2,7 +2,8 @@
 
 echo "Install basic utility software"
 sudo pacman -S spotify-launcher vlc obs-studio
-yay -S thorium-browser-bin
+yay -S thorium-browser-bin visual-studio-code-bin
+cp ../config-files/code-flags.conf ~/.config/
 
 # If this meta package is bloat. Install what u want. (Steam, protonupqt etc)
 echo "Install gaming-meta"

@@ -8,7 +8,8 @@ sudo pacman -Syu
 # Install nessesary packages
 sudo pacman -S libva-nvidia-driver zsh zsh-syntax-highlighting zsh-autosuggestions zsh-history-substring-search \
   bash-completion git udiskie fastfetch fzf btop rsync github-cli neovim bat exa unzip p7zip unrar curl wget \
-  kitty capitaine-cursors pavucontrol appmenu-gtk-module libdbusmenu-glib pipewire-audio pipewire-pulse
+  kitty capitaine-cursors pavucontrol appmenu-gtk-module libdbusmenu-glib pipewire-audio pipewire-pulse \
+  breeze-gtk gnome-themes-extra materia-gtk-theme
 chsh -s /usr/bin/zsh
 # Remove not used
 sudo pacman -R dolphin
