@@ -28,8 +28,8 @@ cd $LAUNCH_PATH
 
 # Nerd Font with pac group + thai font
 yay -S all-repository-fonts
-cp -r ../fonts/Noto_Sans_Thai_Looped/ ~/.fonts/
-fc-cache -f -v
+#cp -r ../fonts/Noto_Sans_Thai_Looped/ ~/.fonts/
+#fc-cache -f -v
 
 # Starship
 curl -sS https://starship.rs/install.sh | sh
