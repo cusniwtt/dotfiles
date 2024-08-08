@@ -6,13 +6,12 @@ echo $LAUNCH_PATH
 sudo pacman -Syu
 
 # Install nessesary packages
-sudo pacman -S libva-nvidia-driver zsh zsh-syntax-highlighting zsh-autosuggestions zsh-history-substring-search \
-  bash-completion git udiskie fastfetch fzf btop rsync github-cli neovim bat exa unzip p7zip unrar curl wget \
-  kitty capitaine-cursors pavucontrol appmenu-gtk-module libdbusmenu-glib pipewire-audio pipewire-pulse \
-  breeze-gtk gnome-themes-extra materia-gtk-theme lazygit
+sudo pacman -S zsh zsh-syntax-highlighting zsh-autosuggestions zsh-history-substring-search \
+  git udiskie fastfetch fzf btop rsync github-cli neovim bat eza unzip p7zip unrar curl wget \
+  kitty pavucontrol appmenu-gtk-module libdbusmenu-glib pipewire-audio pipewire-pulse \
+  capitaine-cursors breeze-gtk gnome-themes-extra lazygit libva-nvidia-driver
 chsh -s /usr/bin/zsh
 # Remove not used
-sudo pacman -R dolphin
 
 # Insall yay
 sudo pacman -S --needed base-devel
