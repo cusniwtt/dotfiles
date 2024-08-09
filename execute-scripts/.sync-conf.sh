@@ -21,3 +21,4 @@ rsync -av ~/.sync-conf.sh ~/Documents/dot-cheat-sheet/execute-scripts
 rsync -av ~/.bashrc ~/Documents/dot-cheat-sheet/dot-files
 rsync -av ~/.zshrc ~/Documents/dot-cheat-sheet/dot-files
 rsync -av ~/.profile ~/Documents/dot-cheat-sheet/dot-files
+rsync -avr ~/.config/fish/ ~/Documents/dot-cheat-sheet/config-files/fish

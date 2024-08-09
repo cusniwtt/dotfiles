@@ -10,7 +10,6 @@ sudo pacman -S zsh zsh-syntax-highlighting zsh-autosuggestions zsh-history-subst
   git udiskie fastfetch fzf btop rsync github-cli neovim bat eza unzip p7zip unrar curl wget \
   kitty pavucontrol appmenu-gtk-module libdbusmenu-glib pipewire-audio pipewire-pulse \
   capitaine-cursors breeze-gtk gnome-themes-extra lazygit libva-nvidia-driver
-chsh -s /usr/bin/zsh
 # Remove not used
 
 # Insall yay
@@ -39,6 +38,7 @@ starship preset jetpack -o ~/.config/starship.toml
 cp ../dot-files/.bashrc ~/
 cp ../dot-files/.zshrc ~/
 cp ../dot-files/.profile ~/
+cp -r ../config-files/fish/ ~/.config/
 sudo cp ../config-files/icons/default/index.theme /usr/share/icons/default/
 cp -r ../config-files/gtk-3.0/ ~/.config/
 cp -r ../config-files/gtk-4.0/ ~/.config/
