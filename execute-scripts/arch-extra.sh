@@ -5,6 +5,7 @@ yay -S firefox spotify-launcher vlc obs-studio visual-studio-code-bin miniconda3
 cp ../config-files/code-flags.conf ~/.config/
 /opt/miniconda3/bin/conda init zsh
 /opt/miniconda3/bin/conda init bash
+/opt/miniconda3/bin/conda init fish
 
 # If this meta package is bloat. Install what u want. (Steam, protonupqt etc)
 echo "Install gaming-meta"
@@ -12,7 +13,7 @@ echo "In Arch will error (meta from cachyos). So, install each app instead."
 echo "or install with aur arch-gaming-meta"
 echo "CachyOS? : (y/n)"
 read cachyos
-if [$cachyos="y"]
+if [ $cachyos == "y" ]
 then
   sudo pacman -S cachyos-gaming-meta discord
 else
