@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "Install basic utility software"
-yay -S firefox spotify-launcher vlc obs-studio visual-studio-code-bin
+yay -S firefox spotify vlc obs-studio visual-studio-code-bin
 cp ../config-files/code-flags.conf ~/.config/
 /opt/miniconda3/bin/conda init zsh
 /opt/miniconda3/bin/conda init bash
