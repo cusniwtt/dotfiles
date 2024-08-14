@@ -80,7 +80,7 @@
     
     "disk": {
         "format": "{free}   ",
-        "path": "/",
+        "path": "/home",
         "interval": 30
     },
 

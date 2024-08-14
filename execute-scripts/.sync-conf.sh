@@ -7,6 +7,7 @@ if [ -d ~/.config/hypr ]; then
   rsync -avr --delete ~/.config/wofi/ ~/Documents/dot-cheat-sheet/config-files/wofi
   rsync -avr --delete ~/.config/waypaper/ ~/Documents/dot-cheat-sheet/config-files/waypaper
   rsync -avr --delete ~/.config/mako/ ~/Documents/dot-cheat-sheet/config-files/mako
+  rsync -avr --delete ~/.config/wlogout/ ~/Documents/dot-cheat-sheet/config-files/wlogout
 else
   echo "Hyprland config directory not found. Skipping..."
 fi
