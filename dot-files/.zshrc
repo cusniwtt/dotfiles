@@ -1,12 +1,6 @@
 # Cleanup orphaned packages
 alias cleanup="sudo pacman -Rsn $(pacman -Qtdq)"
 
-# Fish-like syntax highlighting and autosuggestions
-source "/usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
-source "/usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh"
-# Use history substring search
-source "/usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh"
-
 # Enable Wayland support for different applications
 if [ "$XDG_SESSION_TYPE" = "wayland" ]; then
     export WAYLAND=1
@@ -30,15 +24,19 @@ if [ -x "$(command -v eza)" ]; then
 fi
 
 # Change cat to bat
-alias cat='bat --style=plain'
+alias cat="bat --style=plain"
 
 # Change vim to nvim
 alias vi="nvim"
 
 # Get ip
-alias pubip='curl ifconfig.co/'
+alias pubip="curl ifconfig.co/"
 
-alias sync-conf="~/.sync-conf.sh"
+# Sync config
+alias sconf="~/.sync-conf.sh"
+
+# lazygit
+alias lg="lazygit"
 
 # fzf
 fzcd() {
@@ -47,21 +45,11 @@ fzcd() {
 }
 alias fd=fzcd
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/opt/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/opt/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/opt/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/opt/miniconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-export CRYPTOGRAPHY_OPENSSL_NO_LEGACY=1
-
-#fastfetch
+# Initialize startship
 eval "$(starship init zsh)"
+
+# Fish-like syntax highlighting and autosuggestions
+source "/usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+source "/usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh"
+# Use history substring search
+source "/usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh"
