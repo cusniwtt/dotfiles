@@ -3,9 +3,6 @@
 echo "Install basic utility software"
 yay -S firefox spotify vlc obs-studio visual-studio-code-bin
 cp ../config-files/code-flags.conf ~/.config/
-/opt/miniconda3/bin/conda init zsh
-/opt/miniconda3/bin/conda init bash
-/opt/miniconda3/bin/conda init fish
 
 # If this meta package is bloat. Install what u want. (Steam, protonupqt etc)
 echo "Install gaming-meta"
