@@ -6,7 +6,7 @@ echo $LAUNCH_PATH
 sudo pacman -Syu
 
 # Install nessesary packages
-sudo pacman -S zsh zsh-syntax-highlighting zsh-autosuggestions zsh-history-substring-search \ 
+sudo pacman -S zsh zsh-syntax-highlighting zsh-autosuggestions zsh-history-substring-search \
   git udiskie fastfetch fzf btop rsync github-cli neovim bat eza unzip p7zip unrar curl wget \
   kitty pavucontrol appmenu-gtk-module libdbusmenu-glib pipewire-audio pipewire-pulse xdg-user-dirs\
   capitaine-cursors breeze-gtk gnome-themes-extra lazygit libva-nvidia-driver
