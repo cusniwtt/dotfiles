@@ -21,17 +21,26 @@ chsh -s /usr/bin/zsh
 
 # Insall yay
 sudo pacman -S --needed base-devel
-git clone https://aur.archlinux.org/paru.git ~/paru
-cd ~/paru
+git clone https://aur.archlinux.org/yay.git ~/yay
+cd ~/yay
 makepkg -si
-sudo rm -rf ~/paru
-cd $LAUNCH_PATH
+sudo rm -rf ~/yay
+
+# Install paru
+echo "CachyOS? : (y/n)"
+read cachyos
+if [ $cachyos == "y" ]; then
+  cd $LAUNCH_PATH
+else
+  cd $LAUNCH_PATH
+  yay -S paru
+fi
 
 # Add git config
 ./git-config-global.sh
 
 # Nerd Font with pac group + thai font
-paru -S all-repository-fonts
+yay -S all-repository-fonts
 #cp -r ../fonts/Noto_Sans_Thai_Looped/ ~/.fonts/
 #fc-cache -f -v
 
