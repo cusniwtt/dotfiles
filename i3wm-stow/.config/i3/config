@@ -40,16 +40,19 @@ exec_always --no-startup-id xinput set-prop "15" "libinput Accel Profile Enabled
 # Set xrandr
 exec_always --no-startup-id ~/.config/i3/xrandr.sh
 # Start Notification Deamon
-exec_always --no-startup-id mako
+exec_always --no-startup-id dunst
 # Wallpaper restore
 exec_always --no-startup-id ~/.config/i3/fehbg.sh
 # Startup autotiling
 exec_always --no-startup-id autotiling
 # Execute polkit
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+# Execute picom
+exec --no-startup-id picom
+# Setup keyboard layout
+exec_always --no-startup-id "setxkbmap -layout us,th -option grp:ctrl_space_toggle"
 
 # Startup applications
-exec --no-startup-id picom
 exec --no-startup-id kitty
 exec --no-startup-id discord
 exec --no-startup-id steam
