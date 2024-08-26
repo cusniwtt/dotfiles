@@ -1,0 +1,34 @@
+icons_format = "{icon}"
+
+[theme]
+theme = "native"
+[theme.overrides]
+idle_bg = "#222222"
+idle_fg = "#ffffff"
+
+[icons]
+icons = "awesome6"
+[icons.overrides]
+#bat = ["|E|", "|_|", "|=|", "|F|"]
+#bat_charging = "|^| "
+
+[[block]]
+block = "disk_space"
+path = "/"
+info_type = "available"
+alert_unit = "GB"
+interval = 20
+warning = 20.0
+alert = 10.0
+format = " $icon $available.eng(w:2) "
+
+[[block]]
+block = "sound"
+[[block.click]]
+button = "left"
+cmd = "pavucontrol"
+
+[[block]]
+block = "time"
+interval = 5
+format = " $timestamp.datetime(f:'%a %d/%m %R') "

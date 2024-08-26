@@ -12,6 +12,14 @@ else
   echo "Hyprland config directory not found. Skipping..."
 fi
 
+# i3-wm
+if [ -d ~/.config/i3 ]; then
+  rsync -avr --delete ~/.config/i3/ ~/Documents/dot-cheat-sheet/config-files/i3
+  rsync -avr --delete ~/.config/mako/ ~/Documents/dot-cheat-sheet/config-files/mako
+else
+  echo "i3-wm config directory not found. Skipping"
+fi
+
 # sync-conf auto update
 rsync -avr --delete ~/.config/kitty/ ~/Documents/dot-cheat-sheet/config-files/kitty
 rsync -avr --delete ~/.config/wallpapers/ ~/Documents/dot-cheat-sheet/config-files/wallpapers
@@ -22,4 +30,3 @@ rsync -av ~/.sync-conf.sh ~/Documents/dot-cheat-sheet/execute-scripts
 rsync -av ~/.bashrc ~/Documents/dot-cheat-sheet/dot-files
 rsync -av ~/.zshrc ~/Documents/dot-cheat-sheet/dot-files
 rsync -av ~/.profile ~/Documents/dot-cheat-sheet/dot-files
-rsync -avr ~/.config/fish/ ~/Documents/dot-cheat-sheet/config-files/fish

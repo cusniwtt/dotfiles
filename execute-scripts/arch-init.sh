@@ -53,7 +53,6 @@ starship preset jetpack -o ~/.config/starship.toml
 cp ../dot-files/.bashrc ~/
 cp ../dot-files/.zshrc ~/
 cp ../dot-files/.profile ~/
-cp -r ../config-files/fish/ ~/.config/
 sudo cp ../config-files/icons/default/index.theme /usr/share/icons/default/
 cp -r ../config-files/gtk-3.0/ ~/.config/
 cp -r ../config-files/gtk-4.0/ ~/.config/
