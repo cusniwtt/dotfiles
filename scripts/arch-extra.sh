@@ -2,7 +2,6 @@
 
 echo "Install basic utility software"
 paru -S firefox spotify vlc obs-studio visual-studio-code-bin
-cp ../config-files/code-flags.conf ~/.config/
 
 # If this meta package is bloat. Install what u want. (Steam, protonupqt etc)
 echo "Install gaming-meta"

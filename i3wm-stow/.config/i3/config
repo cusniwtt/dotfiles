@@ -45,6 +45,8 @@ exec_always --no-startup-id mako
 exec_always --no-startup-id ~/.config/i3/fehbg.sh
 # Startup autotiling
 exec_always --no-startup-id autotiling
+# Execute polkit
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
 # Startup applications
 exec --no-startup-id picom

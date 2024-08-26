@@ -6,10 +6,3 @@
 paru -S waybar hyprpaper cliphist wofi nemo grim slurp swappy nwg-look eog wireplumber \
   qt5-wayland qt6-wayland mako network-manager-applet polkit-kde-agent pyprland waypaper \
   hyprshade hyprpicker nemo-fileroller nemo-preview wlogout hyprlock
-
-# Copy Config files
-cp -r ../config-files/hypr/ ~/.config/
-cp -r ../config-files/wofi/ ~/.config/
-cp -r ../config-files/waybar/ ~/.config/
-cp -r ../config-files/waypaper/ ~/.config/
-cp -r ../config-files/mako/ ~/.config/
