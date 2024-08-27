@@ -229,6 +229,6 @@ bar {
     }
 }
 
-default_border normal
+default_border pixel 3
 
 gaps inner 10px
