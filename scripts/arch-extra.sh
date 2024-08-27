@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "Install basic utility software"
-paru -S thorium-browser-bin spotify vlc
+sudo pacman -S firefox firefox-i18n-th vlc spotify-launcher
 
 # If this meta package is bloat. Install what u want. (Steam, protonupqt etc)
 echo "Install gaming-meta"

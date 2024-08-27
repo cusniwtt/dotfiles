@@ -50,8 +50,8 @@ starship preset jetpack -o ~/.config/starship.toml
 # NVChad
 #git clone https://github.com/NvChad/starter ~/.config/nvim && nvim
 # LazyVim
-#mv ~/.config/nvim{,.bak}
-#mv ~/.local/share/nvim{,.bak}
-#mv ~/.local/state/nvim{,.bak}
-#mv ~/.cache/nvim{,.bak}
-#git clone https://github.com/LazyVim/starter ~/.config/nvim && rm -rf ~/.config/nvim/.git && nvim
+mv ~/.config/nvim{,.bak}
+mv ~/.local/share/nvim{,.bak}
+mv ~/.local/state/nvim{,.bak}
+mv ~/.cache/nvim{,.bak}
+git clone https://github.com/LazyVim/starter ~/.config/nvim && rm -rf ~/.config/nvim/.git && nvim
