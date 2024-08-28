@@ -58,7 +58,7 @@
     },
 
     "clock#date": {
-        "format": "{:%A, %e %B  %H:%M}", // Icon: calendar-alt
+        "format": "{:%a, %e %B  %H:%M}", // Icon: calendar-alt
         //"format": "{:%I:%M %p  %A %b %d}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "today-format": "<b>{}</b>"
