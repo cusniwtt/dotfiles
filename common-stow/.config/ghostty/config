@@ -1,0 +1,12 @@
+theme = "/home/cusniwtt/.config/ghostty/theme"
+background-opacity = 0.85
+background-blur-radius = 20
+window-save-state = always
+window-height = 40
+window-width = 140
+
+font-family = "SauceCodePro NF Medium"
+font-family-bold = "SauceCodePro NF Bold"
+font-family-italic = "SauceCodePro NF Italic"
+font-family-bold-italic = "SauceCodePro NF Bold Italic"
+font-size = 11
