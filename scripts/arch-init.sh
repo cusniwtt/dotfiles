@@ -41,7 +41,8 @@ fi
 ./git-config-global.sh
 
 # Nerd Font with pac group + thai font
-cp -r ./fonts/ ~/.local/share
+yay -S all-repository-fonts
+cp -r ./fonts/ ~/.local/share/
 fc-cache -f -v
 
 # Starship

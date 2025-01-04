@@ -1,4 +1,7 @@
 #!/bin/bash
 
-paru -S hyprland-meta-git uwsm waybar hyprpaper cliphist wofi nemo grim slurp swappy nwg-look eog wireplumber \
-  qt5-wayland qt6-wayland mako pyprland waypaper hyprshade hyprpicker nemo-fileroller nemo-preview wlogout hyprlock
+yay -S hyprland hyprpaper hyprpicker hyprlock xdg-desktop-portal-hyprland hyprsysteminfo hyprpolkitagent \
+  kitty waybar cliphist wofi nemo grim slurp swappy nwg-look eog wireplumber qt5-wayland qt6-wayland \
+  mako pyprland waypaper hyprshade nemo-fileroller nemo-preview wlogout ly
+
+sudo systemctl enable ly.service
