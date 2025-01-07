@@ -11,10 +11,10 @@ echo "CachyOS? : (y/n)"
 read cachyos
 if [ $cachyos == "y" ]; then
   sudo pacman -S cachyos-gaming-meta discord
-  paru -S mcpelauncher-appimage
+  paru -S mcpelauncher-ui
 else
   sudo pacman -S discord steam gamemode lib32-gamemode
-  paru -S mcpelauncher-appimage
+  paru -S mcpelauncher-ui
   sudo usermod -aG gamemode $(whoami)
   gamemoded -t
 fi
