@@ -8,8 +8,8 @@ sudo pacman -Syu
 # Install nessesary packages
 sudo pacman -S zsh zsh-syntax-highlighting zsh-autosuggestions zsh-history-substring-search \
   git udiskie fastfetch fzf btop rsync github-cli neovim bat eza unzip p7zip unrar curl wget \
-  ghostty kitty pavucontrol appmenu-gtk-module libdbusmenu-glib pipewire-audio pipewire-pulse \
-  xdg-user-dirs lazygit impala usbmuxd libimobiledevice stow
+  kitty pavucontrol appmenu-gtk-module libdbusmenu-glib pipewire-audio pipewire-pulse stow \
+  xdg-user-dirs lazygit impala usbmuxd libimobiledevice bluez bluez-utils blueman
 
 # Create user directory; Documents, Download, etc...
 xdg-user-dirs-update
