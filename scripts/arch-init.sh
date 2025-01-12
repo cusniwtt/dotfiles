@@ -9,7 +9,12 @@ sudo pacman -Syu
 sudo pacman -S zsh zsh-syntax-highlighting zsh-autosuggestions zsh-history-substring-search \
   git udiskie fastfetch fzf btop rsync github-cli neovim bat eza unzip p7zip unrar curl wget \
   kitty pavucontrol appmenu-gtk-module libdbusmenu-glib pipewire-audio pipewire-pulse stow \
-  xdg-user-dirs lazygit impala usbmuxd libimobiledevice bluez bluez-utils blueman
+  xdg-user-dirs lazygit impala usbmuxd libimobiledevice bluez bluez-utils blueman networkmanager
+
+# Enable services
+sudo systemctl enable bluetooth.service
+sudo systemctl enable iwd.service
+sudo systemctl enable NetworkManager.service
 
 # Create user directory; Documents, Download, etc...
 xdg-user-dirs-update
