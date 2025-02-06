@@ -13,8 +13,14 @@ icons = "awesome6"
 #bat_charging = "|^| "
 
 [[block]]
+block = "focused_window"
+[block.format]
+full = " $title.str() |"
+#short = " $title.str() |"
+
+[[block]]
 block = "music"
-format = " $icon {$combo.str(max_w:20) $prev $play $next |}"
+format = " $icon {$combo.str(max_w:20)  $prev $play $next |}"
 player = "spotify"
 
 #[[block]]
@@ -27,16 +33,20 @@ player = "spotify"
 #alert = 10.0
 #format = " $icon $available.eng(w:2) "
 
-[[block]]
-block = "keyboard_layout"
-driver = "setxkbmap"
-interval = 15
+#[[block]]
+#block = "keyboard_layout"
+#driver = "setxkbmap"
+#interval = 15
 
 [[block]]
 block = "sound"
 [[block.click]]
 button = "left"
 cmd = "pavucontrol"
+
+[[block]]
+block = "net"
+format = " $icon {$signal_strength|Wired}"
 
 [[block]]
 block = "time"
