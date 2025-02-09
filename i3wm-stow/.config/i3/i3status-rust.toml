@@ -24,16 +24,6 @@ format = " $icon {$combo.str(max_w:20)  $prev $play $next |}"
 player = "spotify"
 
 #[[block]]
-#block = "disk_space"
-#path = "/"
-#info_type = "available"
-#alert_unit = "GB"
-#interval = 20
-#warning = 20.0
-#alert = 10.0
-#format = " $icon $available.eng(w:2) "
-
-#[[block]]
 #block = "keyboard_layout"
 #driver = "setxkbmap"
 #interval = 15
@@ -46,7 +36,7 @@ cmd = "pavucontrol"
 
 [[block]]
 block = "net"
-format = " $icon {$signal_strength|Wired}"
+format = " $icon {$ssid|NO INTERNET}"
 
 [[block]]
 block = "time"
