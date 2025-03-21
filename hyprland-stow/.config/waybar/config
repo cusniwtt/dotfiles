@@ -2,34 +2,32 @@
     "layer": "top", // Waybar at top layer
     "position": "top", // Waybar position (top|bottom|left|right)
     "spacing": 5, // Gaps between modules (4px)
-    "margin-top": 10,
-    "margin-left": 10,
-    "margin-right": 10,
+    "margin-top": 0,
+    "margin-left": 0,
+    "margin-right": 0,
     "margin-bottom": 0,
 
     // Choose the order of the modules
     "modules-left": [
         "group/os-workspaces",
-        "custom/weather",
-        "tray"
+        "hyprland/window"
     ],
     "modules-center": [
+        "custom/weather",
         "clock#date"
     ],
     "modules-right": [
-        "group/sysmon",
-        "group/hardware"
+        //"group/sysmon",
+        "tray",
+        "group/hardware",
+        "custom/power"
     ],
 
     // Modules configuration
     "hyprland/workspaces": {
          "on-click": "activate",
-         "format": "{icon}",
-         "format-icons": {
-            "1": "",
-            "2": "",
-            "3": "",
-         },
+         "format": "{name}",
+         "persistent-workspaces": {"*": 4},
          "all-outputs": true
     },
 
@@ -47,7 +45,7 @@
     },
 
     "tray": {
-        "icon-size": 16,
+        "icon-size": 18,
         "spacing": 5
     },
 
@@ -85,7 +83,7 @@
     },
 
     "network": {
-        "format-wifi": "   ({signalStrength}%)",
+        "format-wifi": "  ({signalStrength}%)",
         "format-ethernet": " ",
         "format-linked": "{ifname} (No IP) ",
         "format": "",
@@ -96,6 +94,16 @@
         "tooltip-format": " {bandwidthUpBits}\n {bandwidthDownBits}\n{ifname}\n{ipaddr}/{cidr}\n",
         "tooltip-format-wifi": " {essid} {frequency}MHz\nStrength: {signaldBm}dBm ({signalStrength}%)\nIP: {ipaddr}/{cidr}\n {bandwidthUpBits}  {bandwidthDownBits}",
         "interval": 1
+    },
+
+    "bluetooth": {
+	      //"controller": "controller1", // specify the alias of the controller if there are more than 1 on the system
+	      "format": " {status}   ",
+	      "format-disabled": " ", // an empty format will hide the module
+	      "format-connected": " {num_connections} connected ",
+	      "tooltip-format": "{controller_alias}\t{controller_address}",
+	      "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+	      "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}"
     },
 
     "pulseaudio": {
@@ -156,7 +164,7 @@
     },
 
     "custom/power": {
-        "format": "",
+        "format": "  ",
         "tooltip": false,
         "on-click": "wlogout"
     },
@@ -167,6 +175,7 @@
         "modules": [
             "wireplumber",
             "hyprland/language",
+            "bluetooth",
             "network"
         ]
     },
