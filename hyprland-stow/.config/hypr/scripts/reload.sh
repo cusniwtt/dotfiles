@@ -7,4 +7,4 @@ hyprctl reload
 ~/.config/waybar/launch.sh
 
 # Reload pyprland
-pypr reload
+#pypr reload
