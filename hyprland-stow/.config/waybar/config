@@ -1,7 +1,7 @@
 {
     "layer": "top", // Waybar at top layer
     "position": "top", // Waybar position (top|bottom|left|right)
-    "spacing": 5, // Gaps between modules (4px)
+    "spacing": 4, // Gaps between modules (4px)
     "margin-top": 0,
     "margin-left": 0,
     "margin-right": 0,
@@ -19,8 +19,7 @@
     "modules-right": [
         //"group/sysmon",
         "tray",
-        "group/hardware",
-        "custom/power"
+        "group/hardware"
     ],
 
     // Modules configuration
@@ -33,7 +32,7 @@
 
     "hyprland/language": {
 	      "format": "{}",
-        "min-length": 3,
+        "min-length": 2,
         "max-length": 3,
         "format-en": "EN",
         "format-th": "TH"
@@ -83,27 +82,30 @@
     },
 
     "network": {
-        "format-wifi": "  ({signalStrength}%)",
+        "format-wifi": "<span foreground='#93C572'>{icon}</span>",
+        "format-icons": ["󰤟 ", "󰤢 ", "󰤥 ", "󰤨 "],
         "format-ethernet": " ",
         "format-linked": "{ifname} (No IP) ",
         "format": "",
         "format-disconnected": "",
-        "format-alt": "{ipaddr}/{cidr}",
-        "on-click": "wl-copy $(ip address show up scope global | grep inet | head -n1 | cut -d/ -f 1 | tr -d [:space:] | cut -c5-)",
-        "on-click-right": "wl-copy $(ip address show up scope global | grep inet6 | head -n1 | cut -d/ -f 1 | tr -d [:space:] | cut -c6-)",
+        //"format-alt": "{ipaddr}/{cidr}",
+        "on-click": "iwgtk",
+        //"on-click": "wl-copy $(ip address show up scope global | grep inet | head -n1 | cut -d/ -f 1 | tr -d [:space:] | cut -c5-)",
+        //"on-click-right": "wl-copy $(ip address show up scope global | grep inet6 | head -n1 | cut -d/ -f 1 | tr -d [:space:] | cut -c6-)",
         "tooltip-format": " {bandwidthUpBits}\n {bandwidthDownBits}\n{ifname}\n{ipaddr}/{cidr}\n",
-        "tooltip-format-wifi": " {essid} {frequency}MHz\nStrength: {signaldBm}dBm ({signalStrength}%)\nIP: {ipaddr}/{cidr}\n {bandwidthUpBits}  {bandwidthDownBits}",
+        "tooltip-format-wifi": "󱚻 {essid} {frequency}MHz\nStrength: {signaldBm}dBm ({signalStrength}%)\nIP: {ipaddr}/{cidr}\n {bandwidthUpBits}  {bandwidthDownBits}",
         "interval": 1
     },
 
     "bluetooth": {
 	      //"controller": "controller1", // specify the alias of the controller if there are more than 1 on the system
-	      "format": " {status}   ",
+	      "format": "<span foreground='#1793d1'> </span> ",
 	      "format-disabled": " ", // an empty format will hide the module
-	      "format-connected": " {num_connections} connected ",
+	      "format-connected": "<span foreground='#1793d1'> {num_connections}</span>  ",
 	      "tooltip-format": "{controller_alias}\t{controller_address}",
 	      "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
-	      "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}"
+	      "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+        "on-click": "blueman-manager"
     },
 
     "pulseaudio": {
@@ -134,10 +136,10 @@
         //on-click: "${wpctl} set-mute @DEFAULT_AUDIO_SINK@ toggle";
         //on-scroll-down: "${wpctl} set-volume -l 1.0 @DEFAULT_AUDIO_SINK@ 0.04+";
         //on-scroll-up: "${wpctl} set-volume -l 1.0 @DEFAULT_AUDIO_SINK@ 0.04-";
-        "format": "<span foreground='#fab387'>{icon}</span> {volume}%",
+        "format": "<span foreground='#fab387'>{icon} {volume}%</span>",
         "format-muted": " ",
         "format-source": "",
-        "format-source-muted": "",
+        "format-source-muted": " ",
         //"format-muted": "<span foreground='#fab387'> </span>",
         //"format-icons": [ "<span foreground='#fab387'></span>" ]
         "format-icons": {
@@ -164,7 +166,7 @@
     },
 
     "custom/power": {
-        "format": "  ",
+        "format": " ",
         "tooltip": false,
         "on-click": "wlogout"
     },
@@ -176,7 +178,8 @@
             "wireplumber",
             "hyprland/language",
             "bluetooth",
-            "network"
+            "network",
+            "custom/power"
         ]
     },
     
