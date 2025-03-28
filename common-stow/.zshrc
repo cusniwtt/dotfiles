@@ -1,6 +1,3 @@
-# Cleanup orphaned packages
-alias cleanup="sudo pacman -Rsn $(pacman -Qtdq)"
-
 # Enable Wayland support for different applications
 if [ "$XDG_SESSION_TYPE" = "wayland" ]; then
     export WAYLAND=1
@@ -32,18 +29,8 @@ alias vi="nvim"
 # Get ip
 alias pubip="curl ifconfig.co/"
 
-# Sync config
-alias sconf="~/.sync-conf.sh"
-
 # lazygit
 alias lg="lazygit"
-
-# fzf
-fzcd() {
-    local dir
-    dir=$(find * -type d 2>/dev/null | fzf +m) && cd "$dir" || return
-}
-alias fd=fzcd
 
 # Initialize startship
 eval "$(starship init zsh)"
@@ -52,9 +39,5 @@ eval "$(starship init zsh)"
 fastfetch
 
 # Fish-like syntax highlighting and autosuggestions
-source "/usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
-source "/usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh"
-# Use history substring search
-source "/usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh"
-
-source /usr/share/nvm/init-nvm.sh
+source "/usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+source "/usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
