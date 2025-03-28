@@ -14,7 +14,7 @@ if [ $cachyos == "y" ]; then
   yay -S mcpelauncher-ui
 else
   sudo pacman -S discord steam gamemode lib32-gamemode
-  yay -S mcpelauncher-ui
+  #yay -S mcpelauncher-ui
   sudo usermod -aG gamemode $(whoami)
   gamemoded -t
 fi
