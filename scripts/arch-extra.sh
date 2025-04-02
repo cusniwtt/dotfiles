@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "Install basic utility software"
-sudo pacman -S firefox firefox-i18n-th vlc spotify-launcher gparted dosfstools
+yay -S brave-bin vlc spotify-launcher gparted dosfstools
 
 # If this meta package is bloat. Install what u want. (Steam, protonupqt etc)
 echo "Install gaming-meta"
@@ -11,7 +11,7 @@ echo "CachyOS? : (y/n)"
 read cachyos
 if [ $cachyos == "y" ]; then
   sudo pacman -S cachyos-gaming-meta discord
-  yay -S mcpelauncher-ui
+  #yay -S mcpelauncher-ui
 else
   sudo pacman -S discord steam gamemode lib32-gamemode
   #yay -S mcpelauncher-ui

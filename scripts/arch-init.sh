@@ -6,10 +6,10 @@ echo $LAUNCH_PATH
 sudo pacman -Syu
 
 # Install nessesary packages
-sudo pacman -S zsh zsh-syntax-highlighting zsh-autosuggestions zsh-history-substring-search \
-  git udiskie fastfetch fzf btop rsync github-cli neovim bat eza unzip p7zip unrar curl wget \
-  kitty pavucontrol appmenu-gtk-module libdbusmenu-glib pipewire-audio pipewire-pulse stow \
-  xdg-user-dirs lazygit impala usbmuxd libimobiledevice bluez bluez-utils blueman
+sudo pacman -S zsh zsh-syntax-highlighting zsh-autosuggestions git udiskie fastfetch \
+  fzf btop rsync github-cli neovim bat eza unzip p7zip unrar curl wget pavucontrol \
+  pipewire-audio pipewire-pulse stow xdg-user-dirs lazygit impala usbmuxd \
+  libimobiledevice bluez bluez-utils blueman
 
 # Enable services
 sudo systemctl enable bluetooth.service
@@ -50,16 +50,20 @@ yay -S all-repository-fonts
 cp -r ./fonts/ ~/.local/share/
 fc-cache -f -v
 
+# Themeing
+yay -S numix-circle-icon-theme-git materia-gtk-theme adwaita-icon-theme \
+  adwaita-icon-theme-legacy
+
 # Starship
 curl -sS https://starship.rs/install.sh | sh
-#starship preset gruvbox-rainbow -o ~/.config/starship.toml
-starship preset jetpack -o ~/.config/starship.toml
+starship preset gruvbox-rainbow -o ~/.config/starship.toml
+#starship preset jetpack -o ~/.config/starship.toml
 
 # NVChad
-#git clone https://github.com/NvChad/starter ~/.config/nvim && nvim
+git clone https://github.com/NvChad/starter ~/.config/nvim && nvim
 # LazyVim
-mv ~/.config/nvim{,.bak}
-mv ~/.local/share/nvim{,.bak}
-mv ~/.local/state/nvim{,.bak}
-mv ~/.cache/nvim{,.bak}
-git clone https://github.com/LazyVim/starter ~/.config/nvim && rm -rf ~/.config/nvim/.git && nvim
+#mv ~/.config/nvim{,.bak}
+#mv ~/.local/share/nvim{,.bak}
+#mv ~/.local/state/nvim{,.bak}
+#mv ~/.cache/nvim{,.bak}
+#git clone https://github.com/LazyVim/starter ~/.config/nvim && rm -rf ~/.config/nvim/.git && nvim
