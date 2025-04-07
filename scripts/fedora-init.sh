@@ -16,8 +16,8 @@ sudo dnf install firefox -y
 sudo dnf config-manager --set-enabled fedora-cisco-openh264
 sudo dnf install gstreamer1-plugin-openh264 mozilla-openh264 -y
 # Install Brave
-sudo dnf config-manager addrepo --from-repofile=https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo
-sudo dnf install brave-browser
+#sudo dnf config-manager addrepo --from-repofile=https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo
+#sudo dnf install brave-browser
 # INSTALLING ALL CODECS FOR FEDORA
 sudo dnf install gstreamer1-plugins-{bad-\*,good-\*,base} gstreamer1-plugin-openh264 gstreamer1-libav --exclude=gstreamer1-plugins-bad-free-devel -y
 sudo dnf install lame\* --exclude=lame-devel -y
