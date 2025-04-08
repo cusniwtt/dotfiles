@@ -55,7 +55,7 @@ yay -S numix-circle-icon-theme-git materia-gtk-theme adwaita-icon-theme \
   adwaita-icon-theme-legacy
 
 # Starship
-curl -sS https://starship.rs/install.sh | sh
+sudo pacman -S starship
 starship preset gruvbox-rainbow -o ~/.config/starship.toml
 #starship preset jetpack -o ~/.config/starship.toml
 
