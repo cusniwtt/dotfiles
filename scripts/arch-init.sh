@@ -8,8 +8,7 @@ sudo pacman -Syu
 # Install nessesary packages
 sudo pacman -S zsh zsh-syntax-highlighting zsh-autosuggestions git udiskie fastfetch \
   fzf btop rsync github-cli neovim bat eza unzip p7zip unrar curl wget pavucontrol \
-  pipewire-audio pipewire-pulse stow xdg-user-dirs lazygit impala usbmuxd \
-  libimobiledevice bluez bluez-utils blueman
+  stow xdg-user-dirs lazygit impala usbmuxd libimobiledevice bluez bluez-utils blueman
 
 # Enable services
 sudo systemctl enable bluetooth.service
@@ -31,16 +30,6 @@ git clone https://aur.archlinux.org/yay.git ~/yay
 cd ~/yay
 makepkg -si
 sudo rm -rf ~/yay
-
-# Install paru
-echo "CachyOS? : (y/n)"
-read cachyos
-if [ $cachyos == "y" ]; then
-  cd $LAUNCH_PATH
-else
-  cd $LAUNCH_PATH
-  yay -S paru
-fi
 
 # Add git config
 ./git-config-global.sh
