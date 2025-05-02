@@ -15,9 +15,7 @@ sudo dnf group update core
 sudo dnf install firefox -y
 sudo dnf config-manager --set-enabled fedora-cisco-openh264
 sudo dnf install gstreamer1-plugin-openh264 mozilla-openh264 -y
-# Install Brave
-#sudo dnf config-manager addrepo --from-repofile=https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo
-#sudo dnf install brave-browser
+
 # INSTALLING ALL CODECS FOR FEDORA
 sudo dnf install gstreamer1-plugins-{bad-\*,good-\*,base} gstreamer1-plugin-openh264 gstreamer1-libav --exclude=gstreamer1-plugins-bad-free-devel -y
 sudo dnf install lame\* --exclude=lame-devel -y
@@ -27,7 +25,9 @@ sudo dnf group upgrade --with-optional Multimedia --allowerasing -y
 #sudo dnf install akmod-nvidia xorg-x11-drv-nvidia-cuda libva libva-nvidia-driver -y
 
 # Additional Apps
-sudo dnf install git gh btop fastfetch neovim flatpak fzf bat eza xinput unzip p7zip p7zip-plugins unrar curl wget -y
+# eza missing in fedora 42
+sudo dnf install git gh btop fastfetch flatpak fzf bat xinput unzip p7zip p7zip-plugins unrar \
+  curl wget udiskie stow neovim -y
 sudo dnf copr enable atim/lazygit -y
 sudo dnf install lazygit
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo

@@ -3,7 +3,6 @@
     border-radius: 0px;
     font-family: "Ubuntu Nerd Font";
     font-size: 15px;
-    font-weight: 700;
 }
 
 window#waybar {
@@ -73,8 +72,7 @@ window#waybar.chromium {
 #custom-power,
 #custom-weather,
 #hardware,
-#sysmon,
-#os-workspaces {
+#sysmon {
     padding: 0 0.4em;
     margin: 0 0px;
     color: #ffffff;
@@ -82,11 +80,6 @@ window#waybar.chromium {
     /*border: 2px solid rgba(0, 0, 0, 0);
     border-radius: 14px;*/
 }
-#custom-os {
-    padding: 0 0.4em;
-    color: #1793d1;
-}
-
 
 /* If workspaces is the leftmost module, omit left margin */
 .modules-left > widget:first-child > #workspaces {

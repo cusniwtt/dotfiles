@@ -1,7 +1,4 @@
-sudo dnf install swaylock waybar hyprpaper
-
-# Copy Config files
-cp -r ../config-files/hypr/ ~/.config/
-cp -r ../config-files/wofi/ ~/.config/
-cp -r ../config-files/waybar/ ~/.config/ 
-cp -r ../config-files/swaylock/ ~/.config/
+sudo dnf copr enable solopasha/hyprland -y
+sudo dnf install hyprland hyprpaper hyprpicker hyprlock xdg-desktop-portal-hyprland hyprsysteminfo \
+  hyprpolkitagent kitty waybar cliphist wofi thunar grim slurp swappy wireplumber pavucontrol \
+  qt5ct qt6ct mako waypaper wlogout file-roller eog nwg-panel -y

@@ -9,15 +9,13 @@
 
     // Choose the order of the modules
     "modules-left": [
-        "group/os-workspaces",
+        "group/sysmon",
         "hyprland/window"
     ],
     "modules-center": [
-        "custom/weather",
-        "clock#date"
+        "hyprland/workspaces"
     ],
     "modules-right": [
-        //"group/sysmon",
         "tray",
         "group/hardware"
     ],
@@ -26,7 +24,7 @@
     "hyprland/workspaces": {
          "on-click": "activate",
          "format": "{name}",
-         "persistent-workspaces": {"*": 4},
+         "persistent-workspaces": {"*": 5},
          "all-outputs": true
     },
 
@@ -39,8 +37,8 @@
     },
 
     "hyprland/window": {
-        "format": "  {title}",
-        //"max-length": 50
+        "format": "  [ {class} ] {title}",
+        "max-length": 50
     },
 
     "tray": {
@@ -49,7 +47,7 @@
     },
 
     "clock": {
-        "format": "{:%d %B %R}"
+        "format": "{:%H:%M}"
         //"format-alt": "{:%d %B %Y %R}"
         //"tooltip-format": "{:%d %B %Y}"
     },
@@ -57,26 +55,26 @@
     "clock#date": {
         "format": "{:%a, %e %B  %H:%M}", // Icon: calendar-alt
         //"format": "{:%I:%M %p  %A %b %d}",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "tooltip-format": "<tt><small>{calendar}</small></tt>",
         "today-format": "<b>{}</b>"
     },
 
     "cpu": {
         "interval": 1,
-        "format": "{usage}%  ", // Icon: microchip
+        "format": "<span foreground='#93C572'> </span>{usage}%", // Icon: microchip
         "max-length": 7,
         "min-length": 7
     },
 
     "memory": {
         "interval": 1,
-        "format": "{used:0.2f}GiB", // 
-        "max-length": 8,
-        "min-length": 8
+        "format": "<span foreground='#1793d1'> </span>{used:0.2f}GiB",
+        "max-length": 10,
+        "min-length": 10
     },
     
     "disk": {
-        "format": "{free}   ",
+        "format": "<span foreground='#fab387'> </span>{free} ",
         "path": "/home",
         "interval": 30
     },
@@ -153,11 +151,6 @@
         },
     },
 
-    "custom/os": {
-        "format": " ",
-        "icon": true,
-    },
-
     "custom/weather": {
         "format": "{}",
         "interval": 600,
@@ -175,19 +168,13 @@
     "group/hardware": {
         "orientation": "horizontal",
         "modules": [
+            "custom/weather",
             "wireplumber",
             "hyprland/language",
             "bluetooth",
             "network",
+            "clock#date",
             "custom/power"
-        ]
-    },
-    
-    "group/os-workspaces": {
-        "orientation": "horizontal",
-        "modules": [
-            "custom/os",
-            "hyprland/workspaces"
         ]
     },
 
