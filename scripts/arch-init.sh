@@ -29,7 +29,16 @@ sudo pacman -S --needed base-devel
 git clone https://aur.archlinux.org/yay.git ~/yay
 cd ~/yay
 makepkg -si
+cd ~
 sudo rm -rf ~/yay
+
+# Install wallpaper
+git clone --depth 1 https://github.com/makccr/wallpapers
+mv wallpapers/wallpapers ~/Pictures/Wallpapers
+rm -rf wallpapers
+
+# Jump to launch path
+cd $LAUNCH_PATH
 
 # Add git config
 ./git-config-global.sh
@@ -45,7 +54,7 @@ yay -S numix-circle-icon-theme-git materia-gtk-theme adwaita-icon-theme \
 
 # Starship
 sudo pacman -S starship
-starship preset gruvbox-rainbow -o ~/.config/starship.toml
+#starship preset gruvbox-rainbow -o ~/.config/starship.toml
 #starship preset jetpack -o ~/.config/starship.toml
 
 # NVChad

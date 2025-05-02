@@ -1,1 +1,1 @@
-feh --recursive --bg-fill --randomize ~/.config/wallpapers/*
+feh --recursive --bg-fill --randomize ~/Pictures/Wallpapers/*

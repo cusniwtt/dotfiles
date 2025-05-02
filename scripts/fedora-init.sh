@@ -4,6 +4,9 @@ echo "fastestmirror=True" | sudo tee /etc/dnf/dnf.conf -a
 echo "defaultyes=True" | sudo tee /etc/dnf/dnf.conf -a
 
 # System Update
+LAUNCH_PATH=$(pwd)
+echo $LAUNCH_PATH
+
 sudo dnf install dnf-plugins-core
 sudo dnf update -y
 sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm -y
@@ -38,9 +41,18 @@ sudo dnf install -y adobe-source-code-pro-fonts fira-code-fonts fontawesome-font
 cp -r ./fonts/ ~/.local/share/
 fc-cache -f -v
 
+# Install wallpaper
+cd ~
+git clone --depth 1 https://github.com/makccr/wallpapers
+mv wallpapers/wallpapers ~/Pictures/Wallpapers
+rm -rf wallpapers
+
+# Jump to launch path
+cd $LAUNCH_PATH
+
 # Starship
 curl -sS https://starship.rs/install.sh | sh
-starship preset gruvbox-rainbow -o ~/.config/starship.toml
+#starship preset gruvbox-rainbow -o ~/.config/starship.toml
 
 # NVChad
 git clone https://github.com/NvChad/starter ~/.config/nvim && nvim
