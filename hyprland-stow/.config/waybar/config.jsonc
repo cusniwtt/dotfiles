@@ -22,14 +22,14 @@
 
     // Modules configuration
     "hyprland/workspaces": {
-         "on-click": "activate",
-         "format": "{name}",
-         "persistent-workspaces": {"*": 5},
-         "all-outputs": true
+        "on-click": "activate",
+        "format": "{name}",
+        "persistent-workspaces": {"*": 5},
+        "all-outputs": true
     },
 
     "hyprland/language": {
-	      "format": "{}",
+	    "format": "{}",
         "min-length": 2,
         "max-length": 3,
         "format-en": "EN",
@@ -87,7 +87,7 @@
         "format": "",
         "format-disconnected": "",
         //"format-alt": "{ipaddr}/{cidr}",
-        "on-click": "iwgtk",
+        "on-click": "kitty nmtui",
         //"on-click": "wl-copy $(ip address show up scope global | grep inet | head -n1 | cut -d/ -f 1 | tr -d [:space:] | cut -c5-)",
         //"on-click-right": "wl-copy $(ip address show up scope global | grep inet6 | head -n1 | cut -d/ -f 1 | tr -d [:space:] | cut -c6-)",
         "tooltip-format": " {bandwidthUpBits}\n {bandwidthDownBits}\n{ifname}\n{ipaddr}/{cidr}\n",

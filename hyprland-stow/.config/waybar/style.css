@@ -1,12 +1,12 @@
 * {
-    border: none;
+    border: 0px solid rgba(0, 0, 0, 0);
     border-radius: 0px;
     font-family: "Ubuntu Nerd Font";
     font-size: 15px;
 }
 
 window#waybar {
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, 0.6);
     color: #ffffff;
     transition-property: background-color;
     transition-duration: .5s;
@@ -23,7 +23,7 @@ window#waybar.empty {
 window#waybar.solo {
     background-color: #FFFFFF;
 }
-*/
+
 
 window#waybar.termite {
     background-color: #3F3F3F;
@@ -33,6 +33,7 @@ window#waybar.chromium {
     background-color: #000000;
     border: none;
 }
+*/
 
 /*https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
 
