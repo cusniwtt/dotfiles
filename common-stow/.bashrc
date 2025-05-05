@@ -47,3 +47,5 @@ alias lg="lazygit"
 eval "$(starship init bash)"
 
 fastfetch
+
+. "$HOME/.local/bin/env"
