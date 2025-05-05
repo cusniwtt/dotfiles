@@ -38,7 +38,7 @@ flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.f
 # Fonts
 sudo dnf install -y adobe-source-code-pro-fonts fira-code-fonts fontawesome-fonts-all google-droid-sans-fonts google-noto-sans-cjk-fonts google-noto-color-emoji-fonts google-noto-emoji-fonts jetbrains-mono-fonts
 # Nerd Fonts
-cp -r ./fonts/ ~/.local/share/
+cp -r ./fonts ~/.local/share/
 fc-cache -f -v
 
 # Install wallpaper
