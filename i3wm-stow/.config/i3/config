@@ -15,7 +15,6 @@ set $mod Mod4
 # is used in the bar {} block below.
 #font pango:monospace 11
 font pango:"Noto Sans" 11
-#font pango:"Inter" 11
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -71,7 +70,7 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 
 # Default app
 set $term xfce4-terminal
-set $files thunar
+set $files nemo
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -239,6 +238,7 @@ bar {
 	position top
     	#tray_output primary\\
     	status_command i3status-rs ~/.config/i3/i3status-rust.toml
+        #status_command i3status
     	colors {
         	separator #666666
         	background #222222
@@ -253,9 +253,10 @@ bar {
 # floating workspace
 for_window [class=".*"] floating enable
 # Focus previous window
-bindsym $mod+Tab focus next
+bindsym Mod1+Tab focus next
 
 # Borders
 default_border normal
+default_floating_border normal
 #default_border pixel 3
 #gaps inner 10px
