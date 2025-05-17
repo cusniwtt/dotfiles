@@ -15,12 +15,12 @@ icons = "awesome6"
 [[block]]
 block = "focused_window"
 [block.format]
-full = " $title.str() |"
+full = " $title.str() |"
 #short = " $title.str() |"
 
 [[block]]
 block = "music"
-format = " $icon {$combo.str(max_w:20)  $prev $play $next |}"
+format = " $icon {$combo.str(max_w:20,rot_interval:1)  $prev $play $next} |"
 player = "spotify"
 
 #[[block]]
@@ -40,5 +40,5 @@ format = " $icon {$ssid|NO INTERNET}"
 
 [[block]]
 block = "time"
-interval = 5
-format = " $timestamp.datetime(f:'%a %d/%m %R') "
+interval = 1
+format = " $timestamp.datetime(f:'%a %d/%m %I:%M %p') "
