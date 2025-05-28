@@ -240,22 +240,24 @@ bar {
 	#output nonprimary
 	font pango:Noto Sans, FontAwesome 11
 	position top
-    	#tray_output primary\\
-    	status_command i3status-rs ~/.config/i3/i3status-rust.toml
-        #status_command i3status
-    	colors {
-        	separator #666666
-        	background #222222
-        	statusline #dddddd
-        	focused_workspace #0088CC #0088CC #ffffff
-        	active_workspace #333333 #333333 #ffffff
-        	inactive_workspace #333333 #333333 #888888
-        	urgent_workspace #2f343a #900000 #ffffff
-    	}
+    strip_workspace_numbers yes
+    #tray_output primary
+    status_command i3status-rs ~/.config/i3/i3status-rust.toml
+    #status_command i3status
+    colors {
+        separator #666666
+        background #222222
+        statusline #dddddd
+        focused_workspace #0088CC #0088CC #ffffff
+        active_workspace #333333 #333333 #ffffff
+        inactive_workspace #333333 #333333 #888888
+        urgent_workspace #2f343a #900000 #ffffff
+    }
 }
 
 # floating workspace
 for_window [class=".*"] floating enable
+for_window [class="Picture in picture"] sticky enable
 # Focus previous window
 bindsym Mod1+Tab focus next
 

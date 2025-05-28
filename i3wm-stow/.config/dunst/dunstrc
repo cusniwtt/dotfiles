@@ -4,8 +4,6 @@
 
 [global]
     ### Display ###
-    monitor = 2
-
     follow = none
 
     ### Geometry ###
