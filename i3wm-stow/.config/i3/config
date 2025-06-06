@@ -63,7 +63,7 @@ exec --no-startup-id udiskie
 # Keyeing
 exec --no-startup-id /usr/bin/gnome-keyring-daemon --start
 # Openfortivpn (Optional: Need to add openfortivpn in sudoers first)
-exec --no-startup-id "sudo /usr/bin/openfortivpn"
+#exec --no-startup-id "sudo /usr/bin/openfortivpn"
 
 # Use pactl to adjust volume in PulseAudio.
 #set $refresh_i3status killall -SIGUSR1 i3status-rs
@@ -256,8 +256,8 @@ bar {
 }
 
 # floating workspace
-for_window [class=".*"] floating enable
-for_window [class="Picture in picture"] sticky enable
+#for_window [class=".*"] floating enable
+#for_window [class="Picture in picture"] sticky enable
 # Focus previous window
 bindsym Mod1+Tab focus next
 
@@ -265,4 +265,4 @@ bindsym Mod1+Tab focus next
 default_border normal
 default_floating_border normal
 #default_border pixel 3
-#gaps inner 10px
+gaps inner 10px

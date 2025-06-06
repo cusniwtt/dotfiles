@@ -18,11 +18,6 @@ block = "focused_window"
 full = " $title.str() |"
 #short = " $title.str() |"
 
-[[block]]
-block = "music"
-format = " $icon {$combo.str(max_w:20,rot_interval:1)  $prev $play $next} |"
-player = "spotify"
-
 #[[block]]
 #block = "keyboard_layout"
 #driver = "setxkbmap"

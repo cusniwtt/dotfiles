@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "Install basic utility software"
-yay -S google-chrome vlc spotify-launcher gparted dosfstools
+yay -S google-chrome vlc gparted dosfstools
 
 # If this meta package is bloat. Install what u want. (Steam, protonupqt etc)
 echo "Install gaming-meta"
