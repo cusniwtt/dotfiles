@@ -49,8 +49,7 @@ cp -r ./fonts ~/.local/share/
 fc-cache -f -v
 
 # Themeing
-yay -S numix-circle-icon-theme-git materia-gtk-theme adwaita-icon-theme \
-  adwaita-icon-theme-legacy mint-themes yaru-icon-theme
+yay -S materia-gtk-theme adwaita-icon-theme adwaita-icon-theme-legacy mint-themes yaru-icon-theme
 
 # Starship
 sudo pacman -S starship

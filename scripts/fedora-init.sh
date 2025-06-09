@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # https://www.debugpoint.com/10-things-to-do-fedora-39-after-install/
 echo "max_parallel_downloads=10" | sudo tee /etc/dnf/dnf.conf -a
 echo "fastestmirror=True" | sudo tee /etc/dnf/dnf.conf -a

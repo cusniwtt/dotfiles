@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "Install basic utility software"
-yay -S google-chrome vlc gparted dosfstools visual-studio-code-bin dbeaver remmina mailspring
+yay -S google-chrome vlc gparted dosfstools visual-studio-code-bin dbeaver remmina mailspring webapp-manager
 
 # If this meta package is bloat. Install what u want. (Steam, protonupqt etc)
 echo "Install gaming-meta"
