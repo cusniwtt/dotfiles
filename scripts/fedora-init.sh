@@ -13,32 +13,36 @@ sudo dnf install dnf-plugins-core
 sudo dnf update -y
 sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm -y
 sudo dnf install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm -y
-sudo dnf upgrade --refresh -y
-sudo dnf group update core
-
-# Fix Firefox decoder
-sudo dnf install firefox -y
-sudo dnf config-manager --set-enabled fedora-cisco-openh264
-sudo dnf install gstreamer1-plugin-openh264 mozilla-openh264 -y
+sudo dnf config-manager setopt fedora-cisco-openh264.enabled=1
+sudo dnf update @core
 
 # INSTALLING ALL CODECS FOR FEDORA
-sudo dnf install gstreamer1-plugins-{bad-\*,good-\*,base} gstreamer1-plugin-openh264 gstreamer1-libav --exclude=gstreamer1-plugins-bad-free-devel -y
-sudo dnf install lame\* --exclude=lame-devel -y
-sudo dnf group upgrade --with-optional Multimedia --allowerasing -y
-
-# INSTALL NVIDIA DRIVER https://rpmfusion.org/Howto/NVIDIA
+sudo dnf group install multimedia -y
+sudo dnf install rpmfusion-\*-appstream-data -y
+# https://rpmfusion.org/Howto/Multimedia
+sudo dnf swap ffmpeg-free ffmpeg --allowerasing
+sudo dnf update @multimedia --setopt="install_weak_deps=False" --exclude=PackageKit-gstreamer-plugin
+# If intel
+#sudo dnf install intel-media-driver
+# If AMD
+sudo dnf swap mesa-va-drivers mesa-va-drivers-freeworld
+sudo dnf swap mesa-vdpau-drivers mesa-vdpau-drivers-freeworld
+# If NVIDIA https://rpmfusion.org/Howto/NVIDIA
 #sudo dnf install akmod-nvidia xorg-x11-drv-nvidia-cuda libva libva-nvidia-driver -y
 
 # Additional Apps
 # eza missing in fedora 42
-sudo dnf install git gh btop fastfetch flatpak fzf bat xinput unzip p7zip p7zip-plugins unrar \
-  curl wget udiskie stow neovim -y
+sudo dnf copr enable alternateved/eza -y
 sudo dnf copr enable atim/lazygit -y
-sudo dnf install lazygit
+sudo dnf install git gh btop fastfetch flatpak fzf bat unzip p7zip p7zip-plugins unrar \
+  curl wget udiskie stow lazygit eza -y
+
+# Add Flatpak
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
 # Fonts
-sudo dnf install -y adobe-source-code-pro-fonts fira-code-fonts fontawesome-fonts-all google-droid-sans-fonts google-noto-sans-cjk-fonts google-noto-color-emoji-fonts google-noto-emoji-fonts jetbrains-mono-fonts
+sudo dnf install -y adobe-source-code-pro-fonts fira-code-fonts fontawesome-fonts-all google-droid-sans-fonts \
+  google-noto-sans-cjk-fonts google-noto-color-emoji-fonts google-noto-emoji-fonts jetbrains-mono-fonts
 # Nerd Fonts
 cp -r ./fonts ~/.local/share/
 fc-cache -f -v
@@ -53,8 +57,9 @@ rm -rf wallpapers
 cd $LAUNCH_PATH
 
 # Starship
-curl -sS https://starship.rs/install.sh | sh
+sudo dnf copr enable atim/starship
+sudo dnf install starship -y
 #starship preset gruvbox-rainbow -o ~/.config/starship.toml
 
 # NVChad
-git clone https://github.com/NvChad/starter ~/.config/nvim && nvim
+#git clone https://github.com/NvChad/starter ~/.config/nvim && nvim

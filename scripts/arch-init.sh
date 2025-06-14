@@ -8,7 +8,7 @@ sudo pacman -Syu
 # Install nessesary packages
 sudo pacman -S zsh zsh-syntax-highlighting zsh-autosuggestions git udiskie fastfetch \
   fzf btop rsync github-cli bat eza unzip p7zip unrar curl wget stow lazygit impala \
-  xdg-user-dirs usbmuxd libimobiledevice jq
+  xdg-user-dirs usbmuxd libimobiledevice jq less blueman
 
 # Enable services
 #sudo systemctl enable bluetooth.service
