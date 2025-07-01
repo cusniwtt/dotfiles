@@ -14,6 +14,9 @@ sudo systemctl enable containerd.service
 sudo groupadd docker
 sudo usermod -aG docker $USER
 
+echo "Installing uv (python)"
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
 # If this meta package is bloat. Install what u want. (Steam, protonupqt etc)
 echo "Install gaming-meta"
 echo "In Arch will error (meta from cachyos). So, install each app instead."
