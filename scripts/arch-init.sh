@@ -45,8 +45,6 @@ cd $LAUNCH_PATH
 
 # Nerd Font with pac group + thai font
 yay -S all-repository-fonts
-cp -r ./fonts ~/.local/share/
-fc-cache -f -v
 
 # Themeing
 yay -S materia-gtk-theme adwaita-icon-theme adwaita-icon-theme-legacy mint-themes yaru-icon-theme

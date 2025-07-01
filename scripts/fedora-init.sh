@@ -41,11 +41,9 @@ sudo dnf install git gh btop fastfetch flatpak fzf bat unzip p7zip p7zip-plugins
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
 # Fonts
+sudo dnf copr enable che/nerd-fonts -y
 sudo dnf install -y adobe-source-code-pro-fonts fira-code-fonts fontawesome-fonts-all google-droid-sans-fonts \
-  google-noto-sans-cjk-fonts google-noto-color-emoji-fonts google-noto-emoji-fonts jetbrains-mono-fonts
-# Nerd Fonts
-cp -r ./fonts ~/.local/share/
-fc-cache -f -v
+  google-noto-sans-cjk-fonts google-noto-color-emoji-fonts google-noto-emoji-fonts jetbrains-mono-fonts nerd-fonts
 
 # Install wallpaper
 cd ~
