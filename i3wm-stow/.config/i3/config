@@ -8,7 +8,7 @@
 # i3 config file (v4)
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
-include autostart.conf
+#include autostart.conf		# Disable because use i3 as WM for xfce4
 include keybinding.conf
 include workspace.conf
 include windowsrule.conf

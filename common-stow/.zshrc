@@ -21,10 +21,7 @@ if [ -x "$(command -v eza)" ]; then
 fi
 
 # Change cat to bat
-alias cat="bat --style=plain"
-
-# Change vim to nvim
-alias vi="nvim"
+alias cat="batcat --style=plain"
 
 # Get ip
 alias pubip="curl ifconfig.co/"
@@ -39,7 +36,10 @@ eval "$(starship init zsh)"
 fastfetch
 
 # Fish-like syntax highlighting and autosuggestions
-source "/usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
-source "/usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh"
+source "/usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+source "/usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
+
+#source "/usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+#source "/usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh"
 
 . "$HOME/.local/bin/env"
