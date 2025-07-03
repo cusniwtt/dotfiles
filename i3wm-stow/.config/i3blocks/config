@@ -1,0 +1,86 @@
+# i3blocks config file changed for EndeavourOS-i3 setup
+
+# source is available here:
+# https://raw.githubusercontent.com/endeavouros-team/endeavouros-i3wm-setup/main/etc/skel/.config/i3/i3blocks.conf
+# Maintainer: joekamprad [joekamprad //a_t// endeavouros.com]
+# Former Visual Designer: Florent Valetti [@FLVAL EndeavourOS]
+# created for i3wm setup on EndeavourOS
+# https://endeavouros.com
+
+# cheatsheet for icon fonts used on the block-bar:
+# https://fontawesome.com/v4.7/cheatsheet/
+
+# --> to update this run the following command:
+# wget --backups=1 https://raw.githubusercontent.com/endeavouros-team/endeavouros-i3wm-setup/main/etc/skel/.config/i3/i3blocks.conf -P ~/.config/i3/
+
+# Please see man i3blocks for a complete reference!
+# The man page is also hosted at http://vivien.github.io/i3blocks
+
+
+# List of valid properties:
+#
+# align
+# color
+# command
+# full_text
+# instance
+# interval
+# label
+# min_width
+# name
+# separator
+# separator_block_width
+# short_text
+# signal
+# urgent
+
+# Global properties
+#
+# The top properties below are applied to every block, but can be overridden.
+#separator=false
+markup=pango
+
+#[Weather]
+#command=~/.config/i3/scripts/openweather
+# or:
+#command=~/.config/i3/scripts/openweather-city
+#interval=1800
+#color=#7275b3
+
+[net]
+label= 
+command=echo "$(nmcli d | grep -w connected  | awk '{print $4}')"
+color=#012012
+interval=1
+
+[pavucontrol]
+full_text= 
+command=pavucontrol
+
+[volume-pulseaudio]
+command=~/.config/i3blocks/scripts/volume
+instance=Master
+interval=1
+
+# display keyboard layout name
+# for keyboard layouts switcher
+# see i3 config file
+# this needs xkblayout-state installed from the AUR:
+# https://aur.archlinux.org/packages/xkblayout-state-git
+#[keyboard-layout]
+#command=~/.config/i3blocks/scripts/keyboard-layout
+#interval=2
+
+#[keybindings]
+#full_text= 
+#command=~/.config/i3blocks/scripts/keyhint
+
+# power-profiles-daemon implementation:
+# needs package power-profiles-daemon installed and the service running see here:
+# https://wiki.archlinux.org/title/CPU_frequency_scaling#power-profiles-daemon
+
+[time]
+#label= 
+command=date '+%a %d %b %H:%M:%S'
+interval=1
+
