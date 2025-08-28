@@ -20,7 +20,8 @@
         "disk",
         "cpu",
         "memory",
-        "wireplumber",
+        //"wireplumber",
+	"pulseaudio",
         "hyprland/language",
         "bluetooth",
         "network",
@@ -70,20 +71,20 @@
 
     "cpu": {
         "interval": 1,
-        "format": "<span foreground='#93C572'> </span>{usage}%", // Icon: microchip
+        "format": "<span foreground='#93C572'>  </span>{usage}%", // Icon: microchip
         "max-length": 7,
         "min-length": 7
     },
 
     "memory": {
         "interval": 1,
-        "format": "<span foreground='#1793d1'> </span>{used:0.2f}GiB",
+        "format": "<span foreground='#1793d1'>  </span>{used:0.2f}GiB",
         "max-length": 10,
         "min-length": 10
     },
     
     "disk": {
-        "format": "<span foreground='#fab387'> </span>{free} ",
+        "format": "<span foreground='#fab387'>  </span>{free} ",
         "path": "/home",
         "interval": 30
     },
@@ -96,7 +97,7 @@
         "format": "",
         "format-disconnected": "",
         //"format-alt": "{ipaddr}/{cidr}",
-        "on-click": "iwdgui",
+        "on-click": "nm-connection-editor",
         //"on-click": "wl-copy $(ip address show up scope global | grep inet | head -n1 | cut -d/ -f 1 | tr -d [:space:] | cut -c5-)",
         //"on-click-right": "wl-copy $(ip address show up scope global | grep inet6 | head -n1 | cut -d/ -f 1 | tr -d [:space:] | cut -c6-)",
         "tooltip-format": " {bandwidthUpBits}\n {bandwidthDownBits}\n{ifname}\n{ipaddr}/{cidr}\n",
@@ -106,7 +107,7 @@
 
     "bluetooth": {
 	    //"controller": "controller1", // specify the alias of the controller if there are more than 1 on the system
-        "format": "<span foreground='#1793d1'> </span> ",
+        "format": "<span foreground='#1793d1'></span> ",
 	    "format-disabled": " ", // an empty format will hide the module
         "format-connected": "<span foreground='#1793d1'> {num_connections}</span>  ",
         "tooltip-format": "{controller_alias}\t{controller_address}",
@@ -117,7 +118,7 @@
 
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
-        "format": "{icon}",
+        "format": "<span foreground='#fab387'>{volume}% {icon}</span>",
         "tooltip": true,
         "tooltip-format": "{volume}%",
         "format-bluetooth": "{volume}% {icon} {format_source}",
@@ -132,7 +133,7 @@
             "phone": " ",
             "portable": " ",
             "car": " ",
-            "default": [" ", " ", " "]
+            "default": [" ", " ", " ", " "]
         },
         "on-click": "pavucontrol"
     },
