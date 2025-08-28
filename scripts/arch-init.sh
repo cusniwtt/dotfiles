@@ -44,7 +44,7 @@ cd $LAUNCH_PATH
 ./git-config-global.sh
 
 # Nerd Font with pac group + thai font
-yay -S all-repository-fonts
+#yay -S all-repository-fonts
 
 # Themeing
 yay -S materia-gtk-theme adwaita-icon-theme adwaita-icon-theme-legacy mint-themes yaru-icon-theme
