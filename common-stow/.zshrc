@@ -21,7 +21,7 @@ if [ -x "$(command -v eza)" ]; then
 fi
 
 # Change cat to bat
-alias cat="batcat --style=plain"
+alias cat="bat --style=plain"
 
 # Get ip
 alias pubip="curl ifconfig.co/"
@@ -36,10 +36,14 @@ eval "$(starship init zsh)"
 fastfetch
 
 # Fish-like syntax highlighting and autosuggestions
-source "/usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
-source "/usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
+#source "/usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+#source "/usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
 
-#source "/usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
-#source "/usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh"
+source "/usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+source "/usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh"
 
 . "$HOME/.local/bin/env"
+
+export NVM_DIR="$HOME/.config/nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
