@@ -92,7 +92,7 @@
     "network": {
         "format-wifi": "<span foreground='#93C572'>{icon} {essid}</span>",
         "format-icons": ["󰤟 ", "󰤢 ", "󰤥 ", "󰤨 "],
-        "format-ethernet": " ",
+        "format-ethernet": "<span foreground='#93C572'> </span>",
         "format-linked": "{ifname} (No IP) ",
         "format": "",
         "format-disconnected": "",
@@ -100,7 +100,7 @@
         "on-click": "nm-connection-editor",
         //"on-click": "wl-copy $(ip address show up scope global | grep inet | head -n1 | cut -d/ -f 1 | tr -d [:space:] | cut -c5-)",
         //"on-click-right": "wl-copy $(ip address show up scope global | grep inet6 | head -n1 | cut -d/ -f 1 | tr -d [:space:] | cut -c6-)",
-        "tooltip-format": " {bandwidthUpBits}\n {bandwidthDownBits}\n{ifname}\n{ipaddr}/{cidr}\n",
+        "tooltip-format": " {bandwidthUpBits}\n {bandwidthDownBits}\n{ifname}\n{ipaddr}/{cidr}",
         "tooltip-format-wifi": "󱚻 {essid} {frequency}MHz\nStrength: {signaldBm}dBm ({signalStrength}%)\nIP: {ipaddr}/{cidr}\n {bandwidthUpBits}  {bandwidthDownBits}",
         "interval": 1
     },
