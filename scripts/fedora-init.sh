@@ -25,10 +25,10 @@ sudo dnf update @multimedia --setopt="install_weak_deps=False" --exclude=Package
 # If intel
 #sudo dnf install intel-media-driver
 # If AMD
-sudo dnf swap mesa-va-drivers mesa-va-drivers-freeworld
-sudo dnf swap mesa-vdpau-drivers mesa-vdpau-drivers-freeworld
+#sudo dnf swap mesa-va-drivers mesa-va-drivers-freeworld
+#sudo dnf swap mesa-vdpau-drivers mesa-vdpau-drivers-freeworld
 # If NVIDIA https://rpmfusion.org/Howto/NVIDIA
-#sudo dnf install akmod-nvidia xorg-x11-drv-nvidia-cuda libva libva-nvidia-driver -y
+sudo dnf install akmod-nvidia xorg-x11-drv-nvidia-cuda libva libva-nvidia-driver -y
 
 # Additional Apps
 # eza missing in fedora 42
@@ -46,10 +46,10 @@ sudo dnf install -y adobe-source-code-pro-fonts fira-code-fonts fontawesome-font
   google-noto-sans-cjk-fonts google-noto-color-emoji-fonts google-noto-emoji-fonts jetbrains-mono-fonts nerd-fonts
 
 # Install wallpaper
-cd ~
-git clone --depth 1 https://github.com/makccr/wallpapers
-mv wallpapers/wallpapers ~/Pictures/Wallpapers
-rm -rf wallpapers
+#cd ~
+#git clone --depth 1 https://github.com/makccr/wallpapers
+#mv wallpapers/wallpapers ~/Pictures/Wallpapers
+#rm -rf wallpapers
 
 # Jump to launch path
 cd $LAUNCH_PATH
