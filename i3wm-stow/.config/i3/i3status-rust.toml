@@ -29,11 +29,11 @@ block = "sound"
 button = "left"
 cmd = "pavucontrol"
 
-[[block]]
-block = "net"
-format = " $icon {$ssid|NO INTERNET}"
+#[[block]]
+#block = "net"
+#format = "{$signal_strength $ssid $frequency|Ethernet} "
 
 [[block]]
 block = "time"
 interval = 1
-format = " $timestamp.datetime(f:'%a %d/%m %I:%M %p') "
+format = " $timestamp.datetime(f:'%a %d/%m %I:%M:%S %p') "
