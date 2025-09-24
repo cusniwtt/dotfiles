@@ -12,7 +12,7 @@ general {
 }
 
 order += "disk /"
-order += "load"
+order += "cpu_usage"
 order += "memory"
 order += "volume master"
 order += "tztime local"
@@ -32,7 +32,11 @@ battery all {
 }
 
 disk "/" {
-        format = "%avail"
+        format = "DISK: %avail"
+}
+
+cpu_usage {
+	format = "CPU: %usage"
 }
 
 load {
@@ -40,17 +44,17 @@ load {
 }
 
 memory {
-        format = "%used"
+        format = "MEM: %used"
         threshold_degraded = "1G"
         format_degraded = "MEMORY < %available"
 }
 
 tztime local {
-        format = "%Y-%m-%d %H:%M:%S"
+        format = "%Y-%m-%d %I:%M %p"
 }
 
 volume master {
-        format = "♪: %volume"
+        format = "VOL: %volume"
         format_muted = "♪: muted (%volume)"
         device = "default"
         mixer = "Master"

@@ -31,8 +31,8 @@ bar {
 	position top
 	strip_workspace_numbers yes
 	#tray_output primary
-	status_command i3status-rs ~/.config/i3/i3status-rust.toml
-	#status_command i3status
+	#status_command i3status-rs ~/.config/i3/i3status-rust.toml
+	status_command i3status
 	#status_command i3blocks
 	colors {
         	separator #666666
