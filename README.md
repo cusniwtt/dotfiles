@@ -28,6 +28,7 @@ This repository includes the following scripts:
 - App menu is back
 - Status Area Horizontal Spacing
 - Clipboard Indicator
+- Quick Lang Switch 
 
 ## License
 
