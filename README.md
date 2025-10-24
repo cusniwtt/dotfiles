@@ -24,7 +24,7 @@ This repository includes the following scripts:
 - `scripts/arch-init.sh`: Initialize Arch Linux environment
 - `scripts/git-config-global.sh`: Configure Git globally
 
-# GNOME Extension List (GNOME49)
+### GNOME Extension List (GNOME49)
 - App menu is back
 - Status Area Horizontal Spacing
 - Clipboard Indicator
