@@ -28,7 +28,10 @@ This repository includes the following scripts:
 - App menu is back
 - Status Area Horizontal Spacing
 - Clipboard Indicator
-- Quick Lang Switch 
+- Quick Lang Switch
+
+### Steam
+- Dota 2 `SDL_AUDIODRIVER=alsa game-performance %command% -prewarm -novid -high -map dota`
 
 ## License
 
