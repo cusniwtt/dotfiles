@@ -7,7 +7,7 @@ sudo pacman -Syu
 
 # Install nessesary packages
 sudo pacman -S zsh zsh-syntax-highlighting zsh-autosuggestions git udiskie fastfetch \
-  fzf btop rsync github-cli bat eza unzip p7zip unrar curl wget stow lazygit impala \
+  fzf btop rsync github-cli bat eza unzip p7zip unrar curl wget stow lazygit alsa-utils \
   xdg-user-dirs usbmuxd libimobiledevice jq less blueman
 
 # Enable services
@@ -51,14 +51,4 @@ yay -S materia-gtk-theme adwaita-icon-theme adwaita-icon-theme-legacy mint-theme
 
 # Starship
 sudo pacman -S starship
-#starship preset gruvbox-rainbow -o ~/.config/starship.toml
-#starship preset jetpack -o ~/.config/starship.toml
 
-# NVChad
-#git clone https://github.com/NvChad/starter ~/.config/nvim && nvim
-# LazyVim
-#mv ~/.config/nvim{,.bak}
-#mv ~/.local/share/nvim{,.bak}
-#mv ~/.local/state/nvim{,.bak}
-#mv ~/.cache/nvim{,.bak}
-#git clone https://github.com/LazyVim/starter ~/.config/nvim && rm -rf ~/.config/nvim/.git && nvim
