@@ -10,6 +10,7 @@
     // Choose the order of the modules
     "modules-left": [
         "hyprland/workspaces",
+	//"hyprland/windowcount",
         "hyprland/window"
     ],
     "modules-center": [
@@ -48,6 +49,14 @@
         //"format": "  [ {class} ] {title}"
         "format": "[<span style='italic'> {class} </span>] {title}"
         //"max-length": 50
+    },
+
+    "hyprland/windowcount": {
+    	"format": "[{}]=",
+    	//"format-empty": "[X]",
+    	//"format-windowed": "[T]",
+    	// "format-fullscreen": "[{}]",
+    	"separate-outputs": true
     },
 
     "tray": {
