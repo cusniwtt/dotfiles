@@ -13,7 +13,7 @@
         "hyprland/window"
     ],
     "modules-center": [
-        
+	"clock#date"        
     ],
     "modules-right": [
         //"custom/weather",
@@ -25,8 +25,7 @@
         "hyprland/language",
         "bluetooth",
         "network",
-        "clock#date",
-        "tray"
+	"tray"
     ],
 
     // Modules configuration
@@ -52,7 +51,7 @@
     },
 
     "tray": {
-        "icon-size": 18,
+        "icon-size": 16,
         "spacing": 5
     },
 
@@ -90,9 +89,9 @@
     },
 
     "network": {
-        "format-wifi": "<span foreground='#93C572'>{icon} {essid}</span>",
+        "format-wifi": "<span foreground='#93C572'>{icon} {essid}</span>  ",
         "format-icons": ["󰤟 ", "󰤢 ", "󰤥 ", "󰤨 "],
-        "format-ethernet": "<span foreground='#93C572'> </span>",
+        "format-ethernet": "<span foreground='#93C572'> {ifname}</span>  ",
         "format-linked": "{ifname} (No IP) ",
         "format": "",
         "format-disconnected": "",
@@ -107,7 +106,7 @@
 
     "bluetooth": {
 	    //"controller": "controller1", // specify the alias of the controller if there are more than 1 on the system
-        "format": "<span foreground='#1793d1'></span> ",
+        "format": "<span foreground='#1793d1'> </span> ",
 	    "format-disabled": " ", // an empty format will hide the module
         "format-connected": "<span foreground='#1793d1'> {num_connections}</span>  ",
         "tooltip-format": "{controller_alias}\t{controller_address}",
