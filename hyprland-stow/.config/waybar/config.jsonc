@@ -14,7 +14,6 @@
         "hyprland/window"
     ],
     "modules-center": [
-	"clock#date"        
     ],
     "modules-right": [
         //"custom/weather",
@@ -26,15 +25,20 @@
         "hyprland/language",
         "bluetooth",
         "network",
+	"clock",
 	"tray"
     ],
 
-    // Modules configuration
     "hyprland/workspaces": {
-        "on-click": "activate",
-        "format": "{name}",
-        "persistent-workspaces": {"*": 5},
-        "all-outputs": true
+	"persistent-workspaces": {"*": 5},
+    	"format": "{icon} {windows}",
+    	"format-window-separator": "",
+    	"workspace-taskbar": {
+        	"enable": true,
+        	"update-active-window": true,
+        	"format": "{icon}",
+        	"icon-size": 18
+    	}
     },
 
     "hyprland/language": {
@@ -46,9 +50,10 @@
     },
 
     "hyprland/window": {
-        //"format": "  [ {class} ] {title}"
-        "format": "[<span style='italic'> {class} </span>] {title}"
-        //"max-length": 50
+        "format": "<span style='italic'>[ {class} ]</span>",
+        //"format": "[<span style='italic'> {class} </span>] {title}"
+        //"min-length": 20,
+	//"max-length": 20
     },
 
     "hyprland/windowcount": {
@@ -60,14 +65,15 @@
     },
 
     "tray": {
-        "icon-size": 16,
+        "icon-size": 18,
         "spacing": 5
     },
 
     "clock": {
-        "format": "{:%I:%M %p}"
-        //"format-alt": "{:%d %B %Y %R}"
-        //"tooltip-format": "{:%d %B %Y}"
+        "format": "{:%I:%M %p}",
+        "format-alt": "{:%a, %e %B %Y  %I:%M %p}",
+        "tooltip-format": "{:%a, %e %B %Y}",
+	"interval": 1
     },
 
     "clock#date": {
@@ -180,6 +186,12 @@
         "format": "",
         "tooltip": false,
         "on-click": "wlogout"
+    },
+
+    "custom/separator": {
+        "format": "|", // The character or icon to use as a separator
+        "interval": "once", // Only run once on startup
+        "tooltip": false // Disable tooltip on hover
     }
     
 }
