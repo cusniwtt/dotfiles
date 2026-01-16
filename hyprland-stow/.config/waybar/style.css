@@ -17,25 +17,6 @@ window#waybar.hidden {
     opacity: 0.2;
 }
 
-/*
-window#waybar.empty {
-    background-color: transparent;
-}
-window#waybar.solo {
-    background-color: #FFFFFF;
-}
-
-
-window#waybar.termite {
-    background-color: #3F3F3F;
-}
-
-window#waybar.chromium {
-    background-color: #000000;
-    border: none;
-}
-*/
-
 /*https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
 
 #workspaces button {
@@ -47,14 +28,14 @@ window#waybar.chromium {
 
 #workspaces button:hover {
     background: rgba(210, 210, 210, 0.1);
-    /*border-radius: 14px;*/
 }
 
 #workspaces button.active {
     color: #ffffff;
-    background-color: rgba(35, 85, 116, 0.98);
-    /*border-radius: 14px;*/
-    /*box-shadow: inset 0 -0.2em #ffffff;*/
+    /*background-color: rgba(35, 85, 116, 0.75); #blue color*/
+    background-color: rgba(210, 210, 210, 0.1);
+    border-radius: 1px;
+    box-shadow: inset 0 -0.2em #ffffff;
 }
 
 #workspaces button.urgent {
