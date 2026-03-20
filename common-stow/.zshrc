@@ -42,3 +42,5 @@ fastfetch
 source "/usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 source "/usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh"
 source $HOME/.local/bin/env
+
+. "$HOME/.local/bin/env"
